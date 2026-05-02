@@ -1,0 +1,368 @@
+{
+    "class": {
+        "name": "Necromancer",
+        "description": "Necromancers hold sway overthe forces of life and death, twisting them to serve their ambitions andcommanding small armies of lifeless, animated thralls. They fuel their powerswith their own souls, shaving away parts of their spirit in pursuit of forbiddenknowledge.",
+        "primary_abilities": [
+            "Intelligence"
+        ],
+        "hit_die": "d6",
+        "saving_throw_proficiencies": [
+            "Constitution",
+            "Intelligence"
+        ],
+        "skill_proficiencies": {
+            "choose": 2,
+            "options": [
+                "Arcana",
+                "Deception",
+                "History",
+                "Intimidation",
+                "Investigation",
+                "Medicine",
+                "Persuasion",
+                "Religion",
+                "Stealth"
+            ]
+        },
+        "weapon_proficiencies": [
+            "Simple weapons"
+        ],
+        "armor_training": [
+            "None"
+        ],
+        "starting_equipment": [
+            {
+                "option": "A",
+                "items": "2 Daggers, Arcane Focus (Rod), Robe, Sack, Shovel, Scholar’s Pack, and 13 GP"
+            },
+            {
+                "option": "B",
+                "items": "60 GP"
+            }
+        ],
+        "class_features": [
+            {
+                "level": 1,
+                "name": "Spellcasting",
+                "description": "You can cast necromantic spells usingIntelligence as your spellcasting ability. You prepare a list of spells from theNecromancer spell list and regain expended spell slots after a Long Rest. Youstart with three cantrips."
+            },
+            {
+                "level": 1,
+                "name": "Charnel Touch",
+                "description": "You have a pool of Charnel Touch points equal to 5 × yourNecromancer level. As a Magic action, you can expend points (up to 5 ×Proficiency Bonus) to make a melee spell attack dealing Necrotic damage equal tothe points spent. You can also use these points to heal Undead under yourcontrol."
+            },
+            {
+                "level": 2,
+                "name": "Thralls",
+                "description": "You can animateUndead thralls (Skeletons, Zombies, etc.) using a 10-minute ritual. Thesethralls are bound to your soul and obey your mental commands. They share oneReaction and Bonus Action per round. Your maximum number of thralls and theircombined CR increase as you level."
+            },
+            {
+                "level": 2,
+                "name": "Dead Space",
+                "description": "You gain an extradimensional space linked to an item (like a bagor cloak) that can hold up to 12 Medium or smaller corpses, bones, or willingUndead creatures."
+            },
+            {
+                "level": 3,
+                "name": "Necromancer Subclass",
+                "description": "You gain a Necromancer subclass of your choice, which grantsfeatures at levels 3, 6, 10, and 20."
+            },
+            {
+                "level": 3,
+                "name": "Dark Arcana",
+                "description": "As a Bonus Action, you can expend a spell slot to replenish yourCharnel Touch pool. The pool regains points equal to your Intelligence modifier+ 1d8 per level of the spell slot."
+            },
+            {
+                "level": 4,
+                "name": "Ability ScoreImprovement",
+                "description": "You gain the Ability Score Improvement feat oranother feat of your choice for which you qualify. You gain this feature againat levels 8, 12, and 16."
+            },
+            {
+                "level": 5,
+                "name": "Animate Dead",
+                "description": "You always have the Animate Dead spell prepared. Its castingtime is an action, and you can use it to create Spirits or reanimate anyMedium/Small non-undead corpse using Skeleton, Spirit, or Zombie statistics."
+            },
+            {
+                "level": 5,
+                "name": "Critical Spellcasting",
+                "description": "Enemies suffer aCritical Failure if they roll a 1 on a d20 for a saving throw against yourspells (taking double damage). Your spell attacks score a Critical Hit on a rollof 19 or 20."
+            },
+            {
+                "level": 7,
+                "name": "Improved Thralls",
+                "description": "Yourthralls gain Avoidance (half damage on failed Dex saves, no damage on success),can deal Necrotic damage instead of their normal types, and gain Turn Immunity."
+            },
+            {
+                "level": 14,
+                "name": "Improved Critical Spellcasting",
+                "description": "Critical Failures occur on a roll of 1 or 2 for saves against your spells. Yourspell attacks score a Critical Hit on a roll of 18–20."
+            },
+            {
+                "level": 18,
+                "name": "Undying Servitude",
+                "description": "When a thrall is reduced to 0 HP,you can use a Reaction to drop it to 1 HP instead and heal it for twice yourNecromancer level. Regain use on Long Rest or by expending a level 3+ spellslot."
+            },
+            {
+                "level": 19,
+                "name": "Epic Boon",
+                "description": "You gain an EpicBoon feat or another feat of your choice for which you qualify."
+            },
+            {
+                "level": 20,
+                "name": "Lichdom",
+                "description": "You perform the Rite of Lichdomto become an Undead lich. You gain a Spirit Jar (phylactery) for reincarnation,Truesight (120 ft.), and immunity to Necrotic/Poison damage and theExhaustion/Poisoned conditions."
+            }
+        ],
+        "subclasses": [
+            {
+                "name": "BloodAscendant",
+                "features": [
+                    {
+                        "level": 3,
+                        "name": "Blood Ascendant Spells",
+                        "description": "You always have specific spells prepared, such as Charm Personand Vampiric Touch."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Charnel Drain",
+                        "description": "When you reduce an enemy to 0 HP with Charnel Touch, you regain HP equal toyour Intelligence modifier + Necromancer level."
+                    },
+                    {
+                        "level": 6,
+                        "name": "Vampiric Transformation",
+                        "description": "Expend 15 Charnel Touch points toshape-shift into a bat or a cloud of mist for 1 hour."
+                    },
+                    {
+                        "level": 10,
+                        "name": "Children of the Night",
+                        "description": "Your Animate Thralls ritual can summonWolves, Swarms of Bats, or Swarms of Rats, which count as Undead thralls."
+                    },
+                    {
+                        "level": 20,
+                        "name": "Nosferatu [Lichdom]",
+                        "description": "Your spirit jar is acoffin. You gain 10 HP regeneration per turn, Spider Climb, and doubled movementspeed."
+                    }
+                ]
+            },
+            {
+                "name": "Death Knight",
+                "features": [
+                    {
+                        "level": 3,
+                        "name": "Combat Research",
+                        "description": "Gain proficiency with Martial weapons and allarmor/shields. Use Charnel Touch as a Bonus Action when taking the Attackaction. Add Intelligence to AC while wearing armor."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Charnel Resilience",
+                        "description": "Gain Temporary HP equal to the Necroticdamage dealt by your Charnel Touch."
+                    },
+                    {
+                        "level": 6,
+                        "name": "Extra Attack",
+                        "description": "You can attack twice per Attack action, and can replace oneattack with a cantrip."
+                    },
+                    {
+                        "level": 10,
+                        "name": "Overcharged Thralls",
+                        "description": "Regain Charnel Touch points equal to your level when a thrall isreduced to 0 HP or released."
+                    },
+                    {
+                        "level": 20,
+                        "name": "Imperator [Lichdom]",
+                        "description": "Gain Resistance to physical damage, a third attack per Attackaction, and your Necrotic damage ignores resistance/immunity."
+                    }
+                ]
+            },
+            {
+                "name": "Overlord",
+                "features": [
+                    {
+                        "level": 3,
+                        "name": "Overlord Spells",
+                        "description": "You always have specific spells prepared, such as Bane andHaste."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Charnel Aura",
+                        "description": "Bonus Action:Expend Charnel Touch points to create a 30-foot aura that buffs your Undeadthralls' D20 tests, damage, and AC."
+                    },
+                    {
+                        "level": 6,
+                        "name": "DespoticDiscourse",
+                        "description": "Add your Intelligence modifier to Charisma(Deception, Intimidation, and Persuasion) checks."
+                    },
+                    {
+                        "level": 10,
+                        "name": "Sacrificial Thralls",
+                        "description": "Reaction: When hit by an attack, forcethe attack to hit a thrall within 5 feet instead."
+                    },
+                    {
+                        "level": 20,
+                        "name": "Tyrant [Lichdom]",
+                        "description": "You can possess a Humanoid or thrall if youdrop to 0 HP. You can also expend Charnel Touch points to cast Domination spellswithout slots."
+                    }
+                ]
+            },
+            {
+                "name": "Pale Master",
+                "features": [
+                    {
+                        "level": 3,
+                        "name": "Pale Master Spells",
+                        "description": "You always have specific spellsprepared, such as Invisibility and Cloudkill."
+                    },
+                    {
+                        "level": 3,
+                        "name": "CharnelEmpower",
+                        "description": "When dealing damage with a Necromancy spell, expendCharnel Touch points to deal extra Necrotic damage."
+                    },
+                    {
+                        "level": 6,
+                        "name": "Chilling Disposition",
+                        "description": "Gain Intimidation proficiency with anIntelligence bonus. Bonus Action: Expend 10 Charnel Touch points to Frighten acreature."
+                    },
+                    {
+                        "level": 10,
+                        "name": "Thrall Rush",
+                        "description": "OnInitiative, you can empty your Dead Space and all thralls can move up to theirspeed."
+                    },
+                    {
+                        "level": 20,
+                        "name": "Archlich [LICHDOM]",
+                        "description": "GainDevour Soul (regain spell slots on kill), Magic Resistance, and Paralyzing Touch(paralyze on high Charnel Touch damage)."
+                    }
+                ]
+            },
+            {
+                "name": "Pharaoh",
+                "features": [
+                    {
+                        "level": 3,
+                        "name": "Pharaoh Spells",
+                        "description": "You alwayshave specific spells prepared, such as Bless and Divination."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Channel Divinity",
+                        "description": "Use Channel Divinity (2/rest) forAnkh of Radiance, granting allies resistance and dealing Radiant damage toattackers."
+                    },
+                    {
+                        "level": 6,
+                        "name": "Mock Divinity",
+                        "description": "EnhancedThaumaturgy and the ability to create an illusory Avatar, Gathering Storm, orSun and Moon effects."
+                    },
+                    {
+                        "level": 10,
+                        "name": "Scarab of Judgement",
+                        "description": "Magic Action: Destroy a thrall to heal a willing Humanoid forthe thrall's remaining HP."
+                    },
+                    {
+                        "level": 20,
+                        "name": "Mummy Lord [Lichdom]",
+                        "description": "Your spirit jar is a set of four Canopic Jars. Gain MagicResistance, Mummy Rot (curse on Charnel Touch), and Whirlwind of Sand form."
+                    }
+                ]
+            },
+            {
+                "name": "Plague Lord",
+                "features": [
+                    {
+                        "level": 3,
+                        "name": "Charnel Toxin",
+                        "description": "Dealing 5+ damage with Charnel Touch Poisons the target untilyour next turn."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Necrotoxin",
+                        "description": "YourPoison damage and Poisoned condition effects ignore resistance and immunity."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Vile Congregation",
+                        "description": "Enemies within 5 feetof you subtract 1d4 from their D20 tests."
+                    },
+                    {
+                        "level": 6,
+                        "name": "ProjectileSpew",
+                        "description": "Your reach with Charnel Touch and Touch-range spellsincreases by 10 feet."
+                    },
+                    {
+                        "level": 10,
+                        "name": "Bloated Thralls",
+                        "description": "When a thrall dies or is released, it explodes dealing 4d6Poison damage in a 5-foot radius."
+                    },
+                    {
+                        "level": 20,
+                        "name": "Corpulent Lich[Lichdom]",
+                        "description": "Explode on death (Gore Burst) and gain Master ofDisease (enhanced Charnel Touch debuffs like Bleeding or Blinded)."
+                    }
+                ]
+            },
+            {
+                "name": "Reanimator",
+                "features": [
+                    {
+                        "level": 3,
+                        "name": "Skilled Surgeon",
+                        "description": "Gain Medicine proficiency with an Intelligence bonus."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Spell-Stitching",
+                        "description": "Expend Charnel Touchpoints to apply permanent magical stitches to thralls (Armored, Fleet, Skilled,Tough, or Vicious)."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Charnel Voltage",
+                        "description": "Charnel Touch can deal Lightning damage and arc to a second target within 5feet."
+                    },
+                    {
+                        "level": 6,
+                        "name": "Lazarus Bolt",
+                        "description": "Magic Action:Revive a creature that died within the last minute with 1 HP and Temporary HP."
+                    },
+                    {
+                        "level": 10,
+                        "name": "Quick Stitch",
+                        "description": "Magic Action: Apply atemporary 10-minute Spell-Stitch to a thrall."
+                    },
+                    {
+                        "level": 20,
+                        "name": "Patchwork Golem [Lichdom]",
+                        "description": "Your spirit jar is your golem body.Strength/Dexterity/Constitution become 20, gain physical damage resistance, andapply stitches to yourself."
+                    }
+                ]
+            },
+            {
+                "name": "Reaper",
+                "features": [
+                    {
+                        "level": 3,
+                        "name": "Reaper Spells",
+                        "description": "You always have specificspells prepared, such as Invisibility and Phantasmal Killer."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Charnel Veil",
+                        "description": "Dealing 5+ damage with Charnel Touchmakes you Invisible until the start of your next turn."
+                    },
+                    {
+                        "level": 6,
+                        "name": "Umbral Form",
+                        "description": "Magic Action: Become a shadow on the floor,gaining immunity to Grappled/Prone, doubled speed, and a climb speed."
+                    },
+                    {
+                        "level": 10,
+                        "name": "Wraith Flight",
+                        "description": "Your thralls gain a Flyspeed equal to their speed and don't provoke Opportunity Attacks while flying."
+                    },
+                    {
+                        "level": 20,
+                        "name": "Harbinger [Lichdom]",
+                        "description": "Charnel Touchhits on 11+ regardless of AC. Gain a 60 ft. Fly speed and animate killedcreatures as Specters (Grim Harvest)."
+                    }
+                ]
+            }
+        ]
+    }
+}

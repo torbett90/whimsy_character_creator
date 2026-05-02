@@ -1,0 +1,578 @@
+{
+    "class": {
+        "name": "Warmage",
+        "description": "The undisputed masters of cantrips, Warmages turn the most fundamental types of magic into a deadly and precise art. They are masterful strategists and tacticians who treat magic as a weapon to be perfected through discipline and aptitude.",
+        "primary_abilities": [
+            "Intelligence"
+        ],
+        "hit_die": "d8",
+        "saving_throw_proficiencies": [
+            "Constitution",
+            "Intelligence"
+        ],
+        "skill_proficiencies": {
+            "choose": 2,
+            "options": [
+                "Acrobatics",
+                "Animal Handling",
+                "Arcana",
+                "Athletics",
+                "History",
+                "Investigation",
+                "Medicine",
+                "Perception",
+                "Survival"
+            ]
+        },
+        "weapon_proficiencies": [
+            "Simple weapons"
+        ],
+        "tool_proficiencies": [
+            "One gaming set of your choice"
+        ],
+        "armor_training": [
+            "Light armor"
+        ],
+        "starting_equipment": [
+            {
+                "option": "A",
+                "items": [
+                    "Leather Armor",
+                    "Dagger",
+                    "Arcane Focus (Staff)",
+                    "Gaming Set of your choice",
+                    "Explorer’s Pack",
+                    "22 GP"
+                ]
+            },
+            {
+                "option": "B",
+                "items": [
+                    "50 GP"
+                ]
+            }
+        ],
+        "progression_table": {
+            "1": {
+                "proficiency_bonus": 2,
+                "cantrips_known": 4,
+                "cantrip_bonus_dice": "0",
+                "tricks_known": 0
+            },
+            "2": {
+                "proficiency_bonus": 2,
+                "cantrips_known": 4,
+                "cantrip_bonus_dice": "0",
+                "tricks_known": 2
+            },
+            "3": {
+                "proficiency_bonus": 2,
+                "cantrips_known": 5,
+                "cantrip_bonus_dice": "0",
+                "tricks_known": 3
+            },
+            "4": {
+                "proficiency_bonus": 2,
+                "cantrips_known": 5,
+                "cantrip_bonus_dice": "0",
+                "tricks_known": 3
+            },
+            "5": {
+                "proficiency_bonus": 3,
+                "cantrips_known": 6,
+                "cantrip_bonus_dice": "1",
+                "tricks_known": 4
+            },
+            "6": {
+                "proficiency_bonus": 3,
+                "cantrips_known": 6,
+                "cantrip_bonus_dice": "1",
+                "tricks_known": 4
+            },
+            "7": {
+                "proficiency_bonus": 3,
+                "cantrips_known": 6,
+                "cantrip_bonus_dice": "1",
+                "tricks_known": 5
+            },
+            "8": {
+                "proficiency_bonus": 3,
+                "cantrips_known": 6,
+                "cantrip_bonus_dice": "1",
+                "tricks_known": 5
+            },
+            "9": {
+                "proficiency_bonus": 4,
+                "cantrips_known": 7,
+                "cantrip_bonus_dice": "1",
+                "tricks_known": 6
+            },
+            "10": {
+                "proficiency_bonus": 4,
+                "cantrips_known": 7,
+                "cantrip_bonus_dice": "1",
+                "tricks_known": 6
+            },
+            "11": {
+                "proficiency_bonus": 4,
+                "cantrips_known": 7,
+                "cantrip_bonus_dice": "2",
+                "tricks_known": 7
+            },
+            "12": {
+                "proficiency_bonus": 4,
+                "cantrips_known": 7,
+                "cantrip_bonus_dice": "2",
+                "tricks_known": 7
+            },
+            "13": {
+                "proficiency_bonus": 5,
+                "cantrips_known": 8,
+                "cantrip_bonus_dice": "2",
+                "tricks_known": 8
+            },
+            "14": {
+                "proficiency_bonus": 5,
+                "cantrips_known": 8,
+                "cantrip_bonus_dice": "2",
+                "tricks_known": 8
+            },
+            "15": {
+                "proficiency_bonus": 5,
+                "cantrips_known": 8,
+                "cantrip_bonus_dice": "2",
+                "tricks_known": 9
+            },
+            "16": {
+                "proficiency_bonus": 5,
+                "cantrips_known": 8,
+                "cantrip_bonus_dice": "2",
+                "tricks_known": 9
+            },
+            "17": {
+                "proficiency_bonus": 6,
+                "cantrips_known": 9,
+                "cantrip_bonus_dice": "3",
+                "tricks_known": 10
+            },
+            "18": {
+                "proficiency_bonus": 6,
+                "cantrips_known": 9,
+                "cantrip_bonus_dice": "3",
+                "tricks_known": 10
+            },
+            "19": {
+                "proficiency_bonus": 6,
+                "cantrips_known": 9,
+                "cantrip_bonus_dice": "3",
+                "tricks_known": 10
+            },
+            "20": {
+                "proficiency_bonus": 6,
+                "cantrips_known": 10,
+                "cantrip_bonus_dice": "4",
+                "tricks_known": 10
+            }
+        },
+        "class_features": [
+            {
+                "level": 1,
+                "name": "Spellcasting",
+                "description": "You use Intelligence as your spellcasting ability and an Arcane Focus. You start with four Warmage cantrips. When you cast a Warmage cantrip, it counts as a spell of a level equal to half your Warmage level (max level 9) for Dispel Magic."
+            },
+            {
+                "level": 1,
+                "name": "Arcane Initiation",
+                "description": "Choose how you first learned magic (Adventurer, Arcane Event, Circus Performer, Mercenary, Temple Initiate, Tower Apprentice, Self-Taught, or Survivalist). You gain two specific cantrips and proficiency in one specific skill based on your choice."
+            },
+            {
+                "level": 1,
+                "name": "Warmage Edge",
+                "description": "Once per turn when you cast a Warmage cantrip, you add your Intelligence modifier to one damage roll. Starting at level 5, you add extra Cantrip Bonus Dice to the damage roll as shown in the class table."
+            },
+            {
+                "level": 2,
+                "name": "Reliable Cantrip",
+                "description": "When you miss an attack roll or a target succeeds on a save against your Warmage cantrip, the target takes the cantrip's minimum damage (if any). You can apply Warmage Edge to this damage."
+            },
+            {
+                "level": 2,
+                "name": "Warmage Tricks",
+                "description": "You learn two tricks that alter your combat and spellcasting. You gain more tricks at higher levels as shown in the class table."
+            },
+            {
+                "level": 3,
+                "name": "Warmage Subclass",
+                "description": "You gain a Warmage subclass of your choice, granting features at levels 3, 7, 10, 15, and 18."
+            },
+            {
+                "level": 4,
+                "name": "Ability Score Improvement",
+                "description": "You gain the Ability Score Improvement feat or another feat for which you qualify. You gain this feature again at levels 8, 12, and 16."
+            },
+            {
+                "level": 5,
+                "name": "Arcane Surge",
+                "description": "Once per turn when you deal damage with a Warmage cantrip, you can double the damage dice (or triple if it was already a Critical Hit). You have 2 uses (3 at level 11), regaining one on a Short Rest and all on a Long Rest."
+            },
+            {
+                "level": 6,
+                "name": "Tactical Insight",
+                "description": "You gain a bonus to saving throws against spells and other magical effects equal to your Intelligence modifier (minimum +1). This does not apply to Intelligence saving throws."
+            },
+            {
+                "level": 14,
+                "name": "Strategic Deflection",
+                "description": "When you succeed on a saving throw against a spell, you can use a Reaction to redirect the spell's energy to a new target within the spell's range or 30 feet. The new target must save against your spell save DC or suffer the spell's effects. Once per Short or Long Rest."
+            },
+            {
+                "level": 19,
+                "name": "Epic Boon",
+                "description": "You gain an Epic Boon feat or another feat of your choice for which you qualify."
+            },
+            {
+                "level": 20,
+                "name": "Master Warmage",
+                "description": "Whenever you roll Initiative and have no uses of Arcane Surge left, you regain one expended use."
+            }
+        ],
+        "subclasses": [
+            {
+                "name": "House of Bishops",
+                "features": [
+                    {
+                        "level": 3,
+                        "name": "Spellcasting",
+                        "description": "You gain spell slots to cast level 1+ Wizard spells. You use Intelligence as your spellcasting ability. You can use Warmage Edge to improve the damage of these spells."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Arcane Study",
+                        "description": "Gain proficiency in two skills: Arcana, History, Investigation, Medicine, or Religion."
+                    },
+                    {
+                        "level": 7,
+                        "name": "Mystical Companion",
+                        "description": "You always have Find Familiar prepared. You can choose special forms: Imp, Pseudodragon, Quasit, or Sprite."
+                    },
+                    {
+                        "level": 10,
+                        "name": "Siege Casting",
+                        "description": "Your spells deal double damage to objects and structures. You have Advantage on spell attacks against targets 100+ feet away."
+                    },
+                    {
+                        "level": 15,
+                        "name": "Spell Sculpting",
+                        "description": "When casting a spell with a slot, you can choose allies (up to Int mod) to automatically succeed on their saves and take no damage."
+                    },
+                    {
+                        "level": 18,
+                        "name": "Arcane Dominance",
+                        "description": "Bonus Action: Expend spell slots with a combined level of 6+ to regain one use of Arcane Surge."
+                    }
+                ]
+            },
+            {
+                "name": "House of Cards",
+                "features": [
+                    {
+                        "level": 3,
+                        "name": "Bluff",
+                        "description": "Gain proficiency in Deception and Playing Cards. Add Int mod to Deception checks."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Deck of Fate",
+                        "description": "Draw 5 cards on Initiative. Bonus Action: Play cards to match 'Hands' (Pair, Flush, etc.) to enhance a damage-dealing Warmage spell."
+                    },
+                    {
+                        "level": 7,
+                        "name": "High Stakes",
+                        "description": "Discard cards and draw back to 5, losing 2 HP per card chosen."
+                    },
+                    {
+                        "level": 10,
+                        "name": "Dealer's Choice",
+                        "description": "Bonus Action: Gain Resistance, Teleportation, or enter a Demiplane (GM's choice)."
+                    },
+                    {
+                        "level": 15,
+                        "name": "Card Reading",
+                        "description": "Once per turn when drawing, guess the suit. If correct, take Dash, Disengage, or Utilize as part of the same Bonus Action."
+                    },
+                    {
+                        "level": 18,
+                        "name": "Ace in the Hole",
+                        "description": "Whenever you draw cards, draw twice as many and keep half."
+                    }
+                ]
+            },
+            {
+                "name": "House of Darts",
+                "features": [
+                    {
+                        "level": 3,
+                        "name": "Magic Daggers",
+                        "description": "You learn the Magic Daggers cantrip."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Trick Shot",
+                        "description": "Add or subtract a d4 from a ranged attack roll (Int mod uses per rest)."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Bullseye",
+                        "description": "Record d20 rolls on ranged spell attacks. If you roll a recorded number again within 1 minute, gain extra damage, recovery, or a reroll."
+                    },
+                    {
+                        "level": 7,
+                        "name": "Dagger Climb",
+                        "description": "Cast Magic Daggers to gain a Climb Speed equal to your Speed for 10 minutes."
+                    },
+                    {
+                        "level": 10,
+                        "name": "Intercepting Shot",
+                        "description": "Reaction: Use Magic Daggers to reduce an incoming attack roll by 5."
+                    },
+                    {
+                        "level": 15,
+                        "name": "Vanishing Toss",
+                        "description": "Replace a Magic Daggers attack with a teleportation dagger. Bonus Action: Teleport to the dagger (500ft range)."
+                    },
+                    {
+                        "level": 18,
+                        "name": "Dart Burst",
+                        "description": "Action: Clear 10+ unique Bullseye numbers to deal 1d8 Force damage per number in a 60ft cone. Once per Long Rest."
+                    }
+                ]
+            },
+            {
+                "name": "House of Dice",
+                "features": [
+                    {
+                        "level": 3,
+                        "name": "Bonus Proficiencies",
+                        "description": "Gain proficiency in Sleight of Hand and Dice Sets."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Dice of Fate",
+                        "description": "Gain four d6 Dice of Fate. Expend to add to a failed D20 test or damage roll. Expended dice go to the GM to use against you."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Chaos Roll",
+                        "description": "Magic Action: Expend 2 Dice of Fate to roll on the Chaos Roll table for random magical effects."
+                    },
+                    {
+                        "level": 7,
+                        "name": "Loaded Dice",
+                        "description": "Once per turn, flip a d6 to its opposite side (e.g., 1 becomes 6)."
+                    },
+                    {
+                        "level": 10,
+                        "name": "Twisted Fate",
+                        "description": "Bonus Action: Expend a Die of Fate to ignore Disadvantage (on 5) or gain Advantage (on 6)."
+                    },
+                    {
+                        "level": 15,
+                        "name": "Roll the Bones",
+                        "description": "Reaction (when damaged): Expend 2 Dice of Fate to make a Chaos Roll."
+                    },
+                    {
+                        "level": 18,
+                        "name": "Steal Luck",
+                        "description": "On Initiative, roll a d6 and steal that many Dice of Fate back from the GM."
+                    }
+                ]
+            },
+            {
+                "name": "House of Kings",
+                "features": [
+                    {
+                        "level": 3,
+                        "name": "Martial Training",
+                        "description": "Gain proficiency with Martial weapons, Medium armor, and Shields."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Battle Tactics",
+                        "description": "Gain Battle Dice (d6s) and maneuvers (Blitz, Check, Gambit, etc.). Regain dice on Initiative or Rest."
+                    },
+                    {
+                        "level": 7,
+                        "name": "Lead from the Front",
+                        "description": "Difficult terrain costs no extra movement for you or allies within 120 feet."
+                    },
+                    {
+                        "level": 10,
+                        "name": "Tactical Master",
+                        "description": "Allies within 10 feet add your Intelligence modifier to saves against spells."
+                    },
+                    {
+                        "level": 15,
+                        "name": "Checkmate [Maneuver]",
+                        "description": "Bonus Action (on hit): Direct an ally to strike as a Reaction, adding a Battle Die to their damage."
+                    },
+                    {
+                        "level": 18,
+                        "name": "Grandmaster",
+                        "description": "On Initiative, give allies Battle Dice to add to failed D20 tests."
+                    }
+                ]
+            },
+            {
+                "name": "House of Knights",
+                "features": [
+                    {
+                        "level": 3,
+                        "name": "Martial Training",
+                        "description": "Gain proficiency with Martial weapons and all armor/shields. Ignore Strength requirements for Heavy armor/weapons."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Mystical Armament",
+                        "description": "Learn Force Buckler and one blade cantrip (Arc Blade, etc.)."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Manifest Weapon",
+                        "description": "Bonus Action: Create a force weapon. Use Intelligence for attack/damage rolls. Deals Force damage."
+                    },
+                    {
+                        "level": 7,
+                        "name": "Fighting Style",
+                        "description": "Gain a Fighting Style feat of your choice."
+                    },
+                    {
+                        "level": 10,
+                        "name": "Knight's Ward",
+                        "description": "Bonus Action: Gain Temporary HP equal to twice your level. Once per Short/Long Rest."
+                    },
+                    {
+                        "level": 15,
+                        "name": "Tactical Maneuver",
+                        "description": "Teleport up to 30 feet by spending movement."
+                    },
+                    {
+                        "level": 18,
+                        "name": "Field of Blades",
+                        "description": "Magic Action: Make a melee spell attack against up to 5 creatures within 30 feet for 2d10 + Int Force damage."
+                    }
+                ]
+            },
+            {
+                "name": "House of Pawns",
+                "features": [
+                    {
+                        "level": 3,
+                        "name": "Promotion",
+                        "description": "After a Long Rest, choose Adaptive Magic (extra trick/cantrip) or Martial Training (Martial weapons, Medium armor, Shields)."
+                    },
+                    {
+                        "level": 7,
+                        "name": "Pawn Storm",
+                        "description": "Add Int mod to Initiative. Move up to your Speed when you roll Initiative."
+                    },
+                    {
+                        "level": 10,
+                        "name": "Multidiscipline",
+                        "description": "Add half your Proficiency Bonus to any saving throw that doesn't already use it."
+                    },
+                    {
+                        "level": 15,
+                        "name": "Pawn Wall",
+                        "description": "When you deal damage with a cantrip, you and 2 allies within 5ft gain Resistance to that damage type until your next turn."
+                    },
+                    {
+                        "level": 18,
+                        "name": "Fundamental Mastery",
+                        "description": "Once per turn, treat one damage die of a Warmage cantrip as its maximum value."
+                    }
+                ]
+            },
+            {
+                "name": "House of Rooks",
+                "features": [
+                    {
+                        "level": 3,
+                        "name": "Rook Strike",
+                        "description": "Bonus Action: Gain Advantage on an attack/check or impose Disadvantage on a save against your cantrip (Int mod uses per rest)."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Arcane Acrobat",
+                        "description": "Gain proficiency in Acrobatics, Sleight of Hand, or Stealth. Add Int mod to all Dexterity checks."
+                    },
+                    {
+                        "level": 7,
+                        "name": "Covert Magic",
+                        "description": "Cast specific spells (Invisibility, etc.) once per Long Rest without slots or Verbal components. Regain by spending Arcane Surge."
+                    },
+                    {
+                        "level": 10,
+                        "name": "Fleeting Decoy",
+                        "description": "Reaction (when damaged): Attacks against you have Disadvantage until your next turn."
+                    },
+                    {
+                        "level": 15,
+                        "name": "Elusive Step",
+                        "description": "If you move 5+ feet, subsequent movement doesn't provoke Opportunity Attacks."
+                    },
+                    {
+                        "level": 18,
+                        "name": "Arcane Assassin",
+                        "description": "Cast Greater Invisibility on yourself once per Long Rest. Double your Speed while Invisible."
+                    }
+                ]
+            }
+        ],
+        "tricks": [
+            {
+                "name": "Blackjack",
+                "description": "When you fail a D20 test, roll another d20 and add it. If total > 21, you fail. Once per Initiative/Rest."
+            },
+            {
+                "name": "Blasting Cantrip",
+                "description": "Once per turn, Force damage cantrips push targets 10 feet."
+            },
+            {
+                "name": "Blinding Light",
+                "description": "Casting Light can Blind a creature within 10 feet (Con save)."
+            },
+            {
+                "name": "Corrosive Cantrip",
+                "description": "Once per turn, Acid damage cantrips reduce target's AC by half your level (max -5) for the next attack."
+            },
+            {
+                "name": "Draining Cantrip",
+                "description": "Dealing Necrotic/Poison damage grants Temp HP equal to half your level for 1 minute."
+            },
+            {
+                "name": "Explosive Cantrip",
+                "description": "Once per turn, Fire damage cantrips create a 5ft explosion (Dex save for half damage)."
+            },
+            {
+                "name": "Field Medic",
+                "description": "Learn Spare the Dying. Casting it on 0 HP creature restores 1 HP and grants Temp HP. Once per Long Rest."
+            },
+            {
+                "name": "Infinite Variation",
+                "description": "Use Prestidigitation to emulate any non-damaging cantrip (DC 15 Arcana check)."
+            },
+            {
+                "name": "Mystical Armor",
+                "description": "Cast Mage Armor on yourself without a slot. Use Intelligence for AC."
+            },
+            {
+                "name": "Mystical Retort",
+                "description": "Learn Vicious Mockery. Reaction: Cast it on an attacker to impose Disadvantage on their current attack. Once per Rest."
+            },
+            {
+                "name": "Split Fire",
+                "description": "Split damage dice of a single-target cantrip among multiple creatures."
+            }
+        ]
+    }
+}

@@ -1,0 +1,383 @@
+{
+    "class": {
+        "name": "Craftsman",
+        "description": "Craftsmen are virtuosoartisans and genius inventors. Not content merely creating masterwork pieces ofweapons and armor, they invent and engineer ingenious devices and singularlydeadly weapons.",
+        "primary_abilities": [
+            "Strength",
+            "Dexterity"
+        ],
+        "hit_die": "d10",
+        "saving_throw_proficiencies": [
+            "Constitution",
+            "Intelligence"
+        ],
+        "skill_proficiencies": {
+            "choose": 2,
+            "options": [
+                "Arcana",
+                "Athletics",
+                "History",
+                "Investigation",
+                "Medicine",
+                "Perception",
+                "Persuasion"
+            ]
+        },
+        "weapon_proficiencies": [
+            "Simple weapons",
+            "Martial weapons"
+        ],
+        "tool_proficiencies": [
+            "All Artisan’s Tools"
+        ],
+        "armor_training": [
+            "Lightarmor",
+            "Medium armor",
+            "Heavy armor",
+            "Shields"
+        ],
+        "starting_equipment": [
+            {
+                "option": "A",
+                "items": "Chain Mail, Shield, Warhammer, 6 Light Hammers,Explorer’s Pack, and 18 GP"
+            },
+            {
+                "option": "B",
+                "items": "Studded LeatherArmor, 2 Shortswords, Heavy Crossbow, 20 Bolts, Crossbow Bolt Case, Explorer’sPack, and 13 GP"
+            },
+            {
+                "option": "C",
+                "items": "140 GP"
+            }
+        ],
+        "class_features": [
+            {
+                "level": 1,
+                "name": "Expert Crafting",
+                "description": "You gain a set ofCrafting Tools (usable as any Artisan's Tools). You gain Instant Crafting(Utilize action to retrieve nonmagical gear up to 50 GP) and Overnight Crafting(craft nonmagical items during Long Rest with GP limit of level x 10)."
+            },
+            {
+                "level": 1,
+                "name": "Masterwork",
+                "description": "You can improve weapons andarmor into Masterwork versions over 2 hours. Masterwork Weapons gain a bonus toattack and damage rolls (+1 at level 1, increasing to +4 at level 17).Masterwork Armor grants a +1 bonus to AC."
+            },
+            {
+                "level": 1,
+                "name": "WeaponMastery",
+                "description": "You can use the mastery properties of two kinds ofSimple or Martial weapons. You can change one choice whenever you finish a LongRest."
+            },
+            {
+                "level": 2,
+                "name": "Customize Weapon",
+                "description": "After a LongRest, you can spend 50+ GP to modify a weapon's mastery property, replace it, oradd a second property (which only you can use)."
+            },
+            {
+                "level": 2,
+                "name": "Fighting Style",
+                "description": "You gain a Fighting Style feat of your choice.You can replace it whenever you gain a Craftsman level."
+            },
+            {
+                "level": 3,
+                "name": "Craftsman Subclass",
+                "description": "You gain a Craftsman subclass ofyour choice, granting features at levels 3, 6, 10, and 14."
+            },
+            {
+                "level": 4,
+                "name": "Ability Score Improvement",
+                "description": "You gain the Ability ScoreImprovement feat or another feat for which you qualify. You gain this featureagain at levels 8, 12, and 16."
+            },
+            {
+                "level": 5,
+                "name": "Extra Attack",
+                "description": "You can attack twice instead of once whenever you take theAttack action on your turn."
+            },
+            {
+                "level": 5,
+                "name": "Folded Steel",
+                "description": "When you modify a weapon with Customize Weapon, you can changeits damage type to Bludgeoning, Cold, Fire, Lightning, Piercing, or Slashing."
+            },
+            {
+                "level": 6,
+                "name": "Customize Armor",
+                "description": "After a Long Rest,spend 100+ GP to add a benefit to armor: Cast-Off, Climbing, Diving, Integrated(weapon/shield), or Sleek (no Stealth disadvantage)."
+            },
+            {
+                "level": 7,
+                "name": "Fortify Arsenal",
+                "description": "During a Short Rest, you can Hone Weapons(Advantage on next attack) or Reinforce Armor (Resistance to physical damageuntil hit) for up to five items."
+            },
+            {
+                "level": 9,
+                "name": "Eye for Quality",
+                "description": "You can cast Identify and Locate Object without a spell slot orcomponents. Identify also reveals market value."
+            },
+            {
+                "level": 11,
+                "name": "Weapon Enchantment",
+                "description": "Place an enchantment on a Masterworkweapon: Blessed, Elemental, Vampiric, or Venomous. Only you gain the benefits."
+            },
+            {
+                "level": 13,
+                "name": "Armor Enchantment",
+                "description": "Place anenchantment on Masterwork armor: Adamantine, Cloaking, Resistance, or Winged.Only you gain the benefits."
+            },
+            {
+                "level": 15,
+                "name": "Fabrication",
+                "description": "You can cast Fabricate without a spell slot or components usingIntelligence."
+            },
+            {
+                "level": 17,
+                "name": "Improved Enchantment",
+                "description": "Each of your Weapon Enchantments deals two extra dice of damage on a hitinstead of one."
+            },
+            {
+                "level": 18,
+                "name": "Spellwrought Armor",
+                "description": "While wearing Masterwork armor, you can add your Masterwork Bonus to savingthrows."
+            },
+            {
+                "level": 19,
+                "name": "Epic Boon",
+                "description": "You gain an EpicBoon feat or another feat of your choice for which you qualify."
+            },
+            {
+                "level": 20,
+                "name": "Magnum Opus",
+                "description": "Create one Very Rare orLegendary magic item over 30 days. You are instantly attuned, it doesn't countagainst limits, and you can call it to your hand as a Bonus Action."
+            }
+        ],
+        "subclasses": [
+            {
+                "name": "Arcane Maesters’ Guild",
+                "features": [
+                    {
+                        "level": 3,
+                        "name": "Arcane Apprenticeship",
+                        "description": "Learn True Strike and twoWizard cantrips using Intelligence."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Magic ItemCrafting",
+                        "description": "You can craft specific magic items during Long Rests.GP limit increases to level x 25."
+                    },
+                    {
+                        "level": 6,
+                        "name": "Arcane Strike",
+                        "description": "Replace one attack with a Wizard cantrip or the Magic action touse a magic item."
+                    },
+                    {
+                        "level": 10,
+                        "name": "Sever Connection",
+                        "description": "Reaction: End attunement to an item to gain an AC bonus equal to Intelligencemodifier until your next turn."
+                    },
+                    {
+                        "level": 14,
+                        "name": "Magic Item Recharge",
+                        "description": "Recharge magic items equal to Intelligence modifier after aShort Rest. Once per Long Rest."
+                    }
+                ]
+            },
+            {
+                "name": "Armigers’ Guild",
+                "features": [
+                    {
+                        "level": 3,
+                        "name": "Armored Slam",
+                        "description": "Replace an attack with abody slam (5ft range). Target makes Strength save or takes Bludgeoning damageequal to your AC."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Masterwork Shield",
+                        "description": "Improve a Shield to Masterwork (+1 AC bonus)."
+                    },
+                    {
+                        "level": 6,
+                        "name": "Shining Steel",
+                        "description": "On Initiative, challenge creatures within 30ft.They must save or have Disadvantage on attacks against others."
+                    },
+                    {
+                        "level": 10,
+                        "name": "Fortify",
+                        "description": "Bonus Action: Gain AC bonusequal to Str/Dex modifier and Resistance to all damage until next turn. Usesequal to Masterwork Bonus."
+                    },
+                    {
+                        "level": 14,
+                        "name": "Colossal Slam",
+                        "description": "Armored Slam deals extra 2d10 Force damage and knocks targetsProne."
+                    }
+                ]
+            },
+            {
+                "name": "Bladeworkers’ Guild",
+                "features": [
+                    {
+                        "level": 3,
+                        "name": "Weapon Versatilist",
+                        "description": "Once per turn, gain Advantage onan attack roll. Cannot use again with that specific weapon type until Initiativeor Rest."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Bane Weapons",
+                        "description": "Etch a runeof slaying on a melee weapon against a specific creature type for extra 1d10Force damage."
+                    },
+                    {
+                        "level": 6,
+                        "name": "Flex Grip",
+                        "description": "Reachis 5ft greater with Masterwork Two-Handed or Versatile melee weapons on yourturn."
+                    },
+                    {
+                        "level": 10,
+                        "name": "Defensive Disarm",
+                        "description": "Reaction:Attempt to disarm a creature within 5ft that attacks you. Target makes Strengthsave."
+                    },
+                    {
+                        "level": 14,
+                        "name": "Vicious Strike",
+                        "description": "Whenattacking with Advantage, you can take Disadvantage instead to score a CriticalHit on a hit."
+                    }
+                ]
+            },
+            {
+                "name": "Calibarons’ Guild",
+                "features": [
+                    {
+                        "level": 3,
+                        "name": "Exotic Ammunition",
+                        "description": "Create special ammo(Armor-Piercing, Dragon's Breath, Drilling, Flechette) after a Long Rest."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Zeroed Sights",
+                        "description": "Ranged attacks withMasterwork weapons ignore Half and Three-Quarters Cover."
+                    },
+                    {
+                        "level": 6,
+                        "name": "Magazine",
+                        "description": "Modify ranged weapons to have the Reloadproperty, allowing multiple attacks before needing a Bonus Action/Action toreload."
+                    },
+                    {
+                        "level": 10,
+                        "name": "Suppressive Fire",
+                        "description": "Once perturn on ranged hit, target has Disadvantage on its next attack roll."
+                    },
+                    {
+                        "level": 14,
+                        "name": "Stopping Power",
+                        "description": "Treat any damage die on aMasterwork Ranged weapon as at least half the maximum value."
+                    }
+                ]
+            },
+            {
+                "name": "Forgeknights’ Guild",
+                "features": [
+                    {
+                        "level": 3,
+                        "name": "Portable Forge",
+                        "description": "Gain Fire Resistance, learn Mending/Produce Flame, and weaponscan deal Fire damage. Highest fire damage dice explode (Flare Damage)."
+                    },
+                    {
+                        "level": 6,
+                        "name": "Explosive Armory",
+                        "description": "Add the Explode propertyto any weapon dealing Fire damage."
+                    },
+                    {
+                        "level": 10,
+                        "name": "Scorching Steel",
+                        "description": "Reaction: Deal 2d10 Fire damage to a creature within 5ft thathits you while wearing Masterwork armor."
+                    },
+                    {
+                        "level": 14,
+                        "name": "FireBurst",
+                        "description": "Cast Fireball centered on yourself (no damage to self).Uses equal to Masterwork Bonus."
+                    }
+                ]
+            },
+            {
+                "name": "Mechanauts’ Guild",
+                "features": [
+                    {
+                        "level": 3,
+                        "name": "Mechanaut’s Apparatus",
+                        "description": "Build and pilot a Large construct tank. It has its own stats, integratedweapons, and provides Total Cover to the pilot."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Cockpit Upgrade",
+                        "description": "Choose one: Floodlights, Loudspeaker, orPassenger Seat."
+                    },
+                    {
+                        "level": 6,
+                        "name": "Frame Upgrade",
+                        "description": "Choose one: Arachnotron Legs (Climb), Diving Bell (Swim/Air), or HeavySuspension (Jump/Fall)."
+                    },
+                    {
+                        "level": 10,
+                        "name": "Ejector Seat",
+                        "description": "Reaction: Eject yourself and passengers 30ft when takingdamage."
+                    },
+                    {
+                        "level": 14,
+                        "name": "Magitech Upgrade",
+                        "description": "Chooseone: Ballista Cannon, Missile Pod, or Rocket Engine."
+                    }
+                ]
+            },
+            {
+                "name": "Thunderlords’ Guild",
+                "features": [
+                    {
+                        "level": 3,
+                        "name": "Power Cell",
+                        "description": "Gain Lightning Resistance and Charge Points (equal to level).Use points to deal extra Lightning damage (Shock)."
+                    },
+                    {
+                        "level": 6,
+                        "name": "Electric Armory",
+                        "description": "Add the Jolt property to any weapon. ArcingJolt allows electricity to leap to a second target."
+                    },
+                    {
+                        "level": 10,
+                        "name": "Static Charge",
+                        "description": "Bonus Action: Charge Masterwork armor. Nextcreature to hit you with melee takes 3d6 Lightning damage."
+                    },
+                    {
+                        "level": 14,
+                        "name": "Ball Lightning",
+                        "description": "Bonus Action: Spend 3 points to createa plasma ball that moves and charges metallic weapons for extra 1d6 Lightningdamage."
+                    }
+                ]
+            },
+            {
+                "name": "Trappers’ Guild",
+                "features": [
+                    {
+                        "level": 3,
+                        "name": "Danger Sense",
+                        "description": "Advantage on Dexterity saving throws."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Traps",
+                        "description": "Craft and deploy traps (BallBearings, Caltrops, Hunting Trap, etc.) as a Bonus Action. Uses equal to level."
+                    },
+                    {
+                        "level": 6,
+                        "name": "Booby Trap",
+                        "description": "Conceal traps. Concealedtraps deal double damage dice."
+                    },
+                    {
+                        "level": 10,
+                        "name": "Escape Plan",
+                        "description": "Reaction: Move your speed and deploy a trap when an enemy moveswithin 5ft. Uses equal to Masterwork Bonus."
+                    },
+                    {
+                        "level": 14,
+                        "name": "RapidDeployment",
+                        "description": "Utilize action to deploy up to three traps atonce."
+                    }
+                ]
+            }
+        ]
+    }
+}

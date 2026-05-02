@@ -1,0 +1,382 @@
+{
+    "class": {
+        "name": "Warden",
+        "description": "Armed with a shield and stubbornresolve, Wardens stand in defense of their allies and the innocent wherever theytravel. Their source of strength is their bottomless tolerance for punishment.",
+        "primary_abilities": [
+            "Strength",
+            "Constitution"
+        ],
+        "hit_die": "d10",
+        "saving_throw_proficiencies": [
+            "Strength",
+            "Constitution"
+        ],
+        "skill_proficiencies": {
+            "choose": 2,
+            "options": [
+                "Animal Handling",
+                "Athletics",
+                "Insight",
+                "Intimidation",
+                "Medicine",
+                "Perception",
+                "Persuasion",
+                "Survival"
+            ]
+        },
+        "weapon_proficiencies": [
+            "Simple weapons",
+            "Martial weapons"
+        ],
+        "armor_training": [
+            "Light armor",
+            "Medium armor",
+            "Heavy armor",
+            "Shields"
+        ],
+        "starting_equipment": [
+            {
+                "option": "A",
+                "items": "Chain Mail, Shield,Warhammer, 6 Javelins, Dungeoneer’s Pack, and 15 GP"
+            },
+            {
+                "option": "B",
+                "items": "130 GP"
+            }
+        ],
+        "class_features": [
+            {
+                "level": 1,
+                "name": "FightingStyle",
+                "description": "You gain a Fighting Style feat of your choice. Defenseis recommended. You can replace this feat whenever you gain a Warden level."
+            },
+            {
+                "level": 1,
+                "name": "Sentinel’s Stand",
+                "description": "Choose one benefit:Stalwart Spirit (proficiency in one saving throw of your choice), SteadfastToughness (HP maximum increases by Constitution modifier + Warden level), orTower Shield (+3 bonus to AC with a Shield, increasing to +4 at level 10). Youcan change this choice whenever you gain a Warden level."
+            },
+            {
+                "level": 1,
+                "name": "Weapon Mastery",
+                "description": "You can use the mastery properties oftwo kinds of Simple or Martial Melee weapons. You can change these choiceswhenever you finish a Long Rest."
+            },
+            {
+                "level": 2,
+                "name": "Guardian Tactics",
+                "description": "You gain three tactics used as Bonus Actions: Block (allywithin 5ft gains your AC if higher), Challenge (enemy has Disadvantage onattacks against others), and Grasp (5ft emanation prevents enemies from movingfurther away)."
+            },
+            {
+                "level": 2,
+                "name": "Unyielding Resolve",
+                "description": "While you are Bloodied, you have Resistance to Bludgeoning, Piercing, andSlashing damage."
+            },
+            {
+                "level": 3,
+                "name": "Warden Subclass",
+                "description": "You gain a Warden subclass of your choice, granting features atlevels 3, 6, 10, and 17."
+            },
+            {
+                "level": 4,
+                "name": "Ability Score Improvement",
+                "description": "You gain the Ability Score Improvement feat or another feat forwhich you qualify. You gain this feature again at levels 8, 12, and 16."
+            },
+            {
+                "level": 5,
+                "name": "Extra Attack",
+                "description": "You can attack twice insteadof once whenever you take the Attack action on your turn."
+            },
+            {
+                "level": 5,
+                "name": "Interrupt",
+                "description": "Reaction: When an enemy within 5ft takes anaction that allows multiple attacks or abilities (like Multiattack), you preventone of them. You have 3 uses, regaining one on a Short Rest and all on a LongRest. Uses increase at higher levels."
+            },
+            {
+                "level": 7,
+                "name": "Mettle",
+                "description": "When you succeed on a Constitution save to take half damage, youinstead take no damage, and only half damage if you fail. Does not functionwhile Incapacitated."
+            },
+            {
+                "level": 9,
+                "name": "Survive",
+                "description": "Whenreduced to 0 HP but not killed outright, drop to 1 HP instead and regain HPequal to twice your Warden level. Once per Long Rest."
+            },
+            {
+                "level": 11,
+                "name": "Sentinel’s Strike",
+                "description": "Choose one benefit: Interdict (make a meleeattack as part of Interrupt; regain Interrupt on Initiative) or Shield Slam(once per turn on hit, bash with shield for 1d8 + AC bonus). You can change thischoice whenever you finish a Long Rest."
+            },
+            {
+                "level": 13,
+                "name": "Font ofLife",
+                "description": "At the start of your turn, you can end one condition onyourself (no action required). You have 2 uses per Long Rest, regaining one on aShort Rest."
+            },
+            {
+                "level": 14,
+                "name": "Extended Tactics",
+                "description": "Therange of your Guardian Tactics increases to 10 feet (Block and Challenge) ora 10-foot emanation (Grasp)."
+            },
+            {
+                "level": 15,
+                "name": "Improved Resolve",
+                "description": "While you are Bloodied, you have Resistance to every damage typeexcept Force, Necrotic, Psychic, and Radiant."
+            },
+            {
+                "level": 18,
+                "name": "Sentinel’s Soul",
+                "description": "Choose one benefit: All-Seeing (30ftBlindsight), Fortified (no attack roll has Advantage against you), orUnstoppable (move through creature spaces; Prone them if same size or smaller).You can change this choice whenever you finish a Long Rest."
+            },
+            {
+                "level": 19,
+                "name": "Epic Boon",
+                "description": "You gain an Epic Boon feat or another featof your choice for which you qualify."
+            },
+            {
+                "level": 20,
+                "name": "LegendaryResistance",
+                "description": "If you fail a saving throw, you can choose tosucceed instead. You have 3 uses per Long Rest."
+            }
+        ],
+        "subclasses": [
+            {
+                "name": "Beastblood Guardian",
+                "features": [
+                    {
+                        "level": 3,
+                        "name": "Primal Warrior",
+                        "description": "Gain proficiency in Animal Handling, Nature, or Survival with aConstitution bonus. Gain Advantage on attack rolls while Bloodied (once perInitiative/Rest)."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Roar",
+                        "description": "BonusAction: 5ft emanation pushes Large or smaller creatures 5ft away and preventsOpportunity Attacks."
+                    },
+                    {
+                        "level": 6,
+                        "name": "Hunting Grounds",
+                        "description": "Ignore difficult terrain and gain Climb and Swim speeds equal to your Speed."
+                    },
+                    {
+                        "level": 10,
+                        "name": "Wild Pounce",
+                        "description": "Once per turn on hitwith Melee/Unarmed, deal extra 1d8 Slashing damage and target is Prone if Largeor smaller."
+                    },
+                    {
+                        "level": 17,
+                        "name": "Aspect of the Beast",
+                        "description": "Bonus Action: For 1 minute, gain Advantage on attacks while Bloodied, dealbleeding wounds (1d10 Necrotic/turn), and double your Speed. Once per LongRest."
+                    }
+                ]
+            },
+            {
+                "name": "Drake-Blooded",
+                "features": [
+                    {
+                        "level": 3,
+                        "name": "Spellcasting",
+                        "description": "You gain Sorcerer spellcasting using Charisma.You regain slots on a Long Rest."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Mortal Metamagic",
+                        "description": "Expend Hit Point Dice to use Empowered Spell (1 die) orQuickened Spell (2 dice)."
+                    },
+                    {
+                        "level": 6,
+                        "name": "Arcane Strike",
+                        "description": "When you take the Attack action, replace one attack with aSorcerer cantrip (1 action casting time)."
+                    },
+                    {
+                        "level": 10,
+                        "name": "DraconicVengeance",
+                        "description": "Reaction (when damaged within 10ft): Expend a HitPoint Die to deal elemental damage in a 10ft emanation."
+                    },
+                    {
+                        "level": 17,
+                        "name": "Aspect of the Greatwyrm",
+                        "description": "Bonus Action: For 1 minute,gain a 6d6 Breath Weapon, extra 1d6 elemental damage on hits, and a 60ft FlySpeed. Once per Long Rest."
+                    }
+                ]
+            },
+            {
+                "name": "Godsworn",
+                "features": [
+                    {
+                        "level": 3,
+                        "name": "Anointed Block",
+                        "description": "Block adds 1d4 to theally's attack rolls and saving throws."
+                    },
+                    {
+                        "level": 3,
+                        "name": "DivineMandate",
+                        "description": "Learn two Cleric cantrips, gain Religion proficiencywith a Constitution bonus, and gain Radiant Resistance."
+                    },
+                    {
+                        "level": 6,
+                        "name": "Benediction",
+                        "description": "Cast Daylight, Lesser Restoration,Sanctuary, or Zone of Truth once per Long Rest without a slot."
+                    },
+                    {
+                        "level": 10,
+                        "name": "Selfless Survival",
+                        "description": "You can expend youruse of Survive to prevent the demise of a creature within 30 feet."
+                    },
+                    {
+                        "level": 17,
+                        "name": "Sainted Mantle",
+                        "description": "Bonus Action: For 1minute, gain HP regeneration and cast Spirit Guardians without a slot. Once perLong Rest."
+                    }
+                ]
+            },
+            {
+                "name": "Grey Watchman",
+                "features": [
+                    {
+                        "level": 3,
+                        "name": "Battle Tactics",
+                        "description": "You gain Battle Dice (d6s) andmaneuvers. You regain dice on Initiative or Rest. Save DC = 8 + Str/Dex mod +PB."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Siege Defender",
+                        "description": "Gain Advantageon readied/opportunity attacks if you haven't moved. Enemies lose Advantageagainst you if you are near 2+ allies."
+                    },
+                    {
+                        "level": 6,
+                        "name": "UnyieldingSurge",
+                        "description": "Regain an expended Battle Die when you become Bloodied.Once per Initiative/Rest."
+                    },
+                    {
+                        "level": 10,
+                        "name": "Hold the Line",
+                        "description": "While in your Grasp emanation, you and allies have Advantage onStr, Dex, and Con saves."
+                    },
+                    {
+                        "level": 17,
+                        "name": "Unbreakable Sentinel",
+                        "description": "Bonus Action: For 1 minute, regain a Battle Die each turn, adddice to maneuver damage for free, and gain an extra Bonus Action for maneuvers.Once per Long Rest."
+                    }
+                ]
+            },
+            {
+                "name": "Nightgaunt",
+                "features": [
+                    {
+                        "level": 3,
+                        "name": "Death’s Gambit",
+                        "description": "Challenged enemies you damage dropto 0 HP if they have fewer HP than twice your Warden level."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Grave Keeper",
+                        "description": "Gain 60ft Darkvision, NecroticResistance, and Undead Empathy (Undead must save or miss attacks against you)."
+                    },
+                    {
+                        "level": 6,
+                        "name": "Innate Necromancy",
+                        "description": "Cast Darkness,False Life, Gentle Repose, or Speak with Dead once per Long Rest without aslot."
+                    },
+                    {
+                        "level": 10,
+                        "name": "Undying",
+                        "description": "You can use yourSurvive feature three times per Long Rest."
+                    },
+                    {
+                        "level": 17,
+                        "name": "Gravelord",
+                        "description": "Bonus Action: For 1 minute, gain a 15ft FrightfulAura and cast Vampiric Touch as a level 5 spell. Once per Long Rest."
+                    }
+                ]
+            },
+            {
+                "name": "Stoneheart Defender",
+                "features": [
+                    {
+                        "level": 3,
+                        "name": "Stonewall",
+                        "description": "Block reduces physical damage dealt to you or the ally by yourShield's AC bonus."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Earthshatter",
+                        "description": "Replace an attack with a slam; creatures within 5ft (10ft at level 14) mustsave or be Prone."
+                    },
+                    {
+                        "level": 6,
+                        "name": "Roots of Rock",
+                        "description": "Youare Immovable and gain Prone Immunity."
+                    },
+                    {
+                        "level": 10,
+                        "name": "LegendaryInterruption",
+                        "description": "You can use your Interrupt feature to prevent anenemy's Legendary Action attack."
+                    },
+                    {
+                        "level": 17,
+                        "name": "StoneforgedChampion",
+                        "description": "Bonus Action: For 1 minute, use Earthshatter forfree, gain +4 Strength, and gain Resistance to all damage while Bloodied. Onceper Long Rest."
+                    }
+                ]
+            },
+            {
+                "name": "Storm Sentinel",
+                "features": [
+                    {
+                        "level": 3,
+                        "name": "Thunderblast",
+                        "description": "Creatures in your Grasp emanationtake 1d8 Lightning damage."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Seafarer",
+                        "description": "Conjure harmless lightning, gain Lightning/Thunder Resistance, and gain a SwimSpeed."
+                    },
+                    {
+                        "level": 6,
+                        "name": "Storm Wings",
+                        "description": "Gain a Fly Speedequal to your Speed at the start of each of your turns."
+                    },
+                    {
+                        "level": 10,
+                        "name": "Lightning Step",
+                        "description": "Bonus Action: Teleport 60ft anddeal 4d8 Lightning damage to nearby creatures. Restore use by expending anInterrupt."
+                    },
+                    {
+                        "level": 17,
+                        "name": "Stormlord",
+                        "description": "Bonus Action:For 1 minute, cast Call Lightning, gain a 60ft Fly Speed, and improveThunderblast to 3d8. Once per Long Rest."
+                    }
+                ]
+            },
+            {
+                "name": "Verdant Protector",
+                "features": [
+                    {
+                        "level": 3,
+                        "name": "Grasping Vines",
+                        "description": "Grasprange increases to 10 feet (15 feet at level 14) for creatures on the ground."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Cultivator",
+                        "description": "Gain Nature, Stealth, orSurvival proficiency with a Constitution bonus. Ignore difficult terrain andplant-based spell effects."
+                    },
+                    {
+                        "level": 6,
+                        "name": "Nature’s Emissary",
+                        "description": "Cast Goodberry, Plant Growth, Spike Growth, or Speak with Plantsonce per Long Rest without a slot."
+                    },
+                    {
+                        "level": 10,
+                        "name": "VerdantResilience",
+                        "description": "When you use Survive, you and allies within 10ftgain Temporary HP equal to twice your Warden level."
+                    },
+                    {
+                        "level": 17,
+                        "name": "Oak Sentinel",
+                        "description": "Bonus Action: For 1 minute, gain +4 AC, deal 4d6Piercing damage to attackers, and restrain enemies in a 15ft emanation. Once perLong Rest."
+                    }
+                ]
+            }
+        ]
+    }
+}

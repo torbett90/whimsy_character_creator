@@ -1,0 +1,26 @@
+{
+    "name": "Criminal",
+    "description": "You learned to survive by breaking the law. You might have been a pickpocket, a burglar, or a con artist.",
+    "skill_proficiencies": [
+        "Sleight of Hand",
+        "Stealth"
+    ],
+    "tool_proficiencies": [
+        "Thieves' tools",
+        "Gaming set"
+    ],
+    "starting_equipment": [
+        "Crowbar",
+        "Dagger (2)",
+        "Gaming set",
+        "Pouch",
+        "Thieves' tools",
+        "16 GP"
+    ],
+    "origin_feat": "Alert",
+    "asi_options": [
+        "Dexterity",
+        "Intelligence",
+        "Charisma"
+    ]
+}

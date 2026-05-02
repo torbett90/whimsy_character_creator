@@ -1,0 +1,24 @@
+{
+    "name": "Plushie",
+    "description": "Plushies, also called raggedies, are a form of stuffed or soft geppettin. Though they often look humanoid, they may also look like animals, monsters, or any other form of anthropomorphic creature. As living constructs, they are animated, sentient, and independent playthings that do not age and are mature as soon as they become sentient.",
+    "speed": 30,
+    "size": "Small",
+    "traits": [
+        {
+            "name": "Construct Anatomy",
+            "description": "You are immune to nonmagical diseases. You don’t need to eat or breathe, but you can ingest food and drink if you wish. You don’t need to sleep, and magic can’t put you to sleep. You can finish a long rest by spending 4 hours in a motionless state, during which you retain consciousness."
+        },
+        {
+            "name": "False Appearance",
+            "description": "While you are motionless, you are indistinguishable from an ordinary stuffed doll."
+        },
+        {
+            "name": "Stuffed Resilience",
+            "description": "When you take bludgeoning damage, you can use your reaction to gain resistance to the damage, and you are also knocked 5 feet away from the source of the damage. You can’t use this reaction if you can’t be knocked away from the source of the damage."
+        },
+        {
+            "name": "Adorable",
+            "description": "You gain proficiency in the Persuasion skill, and have advantage on Charisma (Persuasion) rolls you make against children or other humanoids that are fond of cute things."
+        }
+    ]
+}

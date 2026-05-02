@@ -1,0 +1,415 @@
+{
+    "class": {
+        "name": "Witch",
+        "description": "Witches are stricken by magic so dark it imprints a lasting shadow upon their essence. Reshaping their curse into spells, they spin this darkness outward to hex creatures and command familiars through force of personality.",
+        "primary_abilities": [
+            "Charisma"
+        ],
+        "hit_die": "d8",
+        "saving_throw_proficiencies": [
+            "Wisdom",
+            "Charisma"
+        ],
+        "skill_proficiencies": {
+            "choose": 2,
+            "options": [
+                "Arcana",
+                "Deception",
+                "Insight",
+                "Intimidation",
+                "Nature",
+                "Persuasion",
+                "Religion",
+                "Survival"
+            ]
+        },
+        "weapon_proficiencies": [
+            "Simple weapons"
+        ],
+        "tool_proficiencies": [
+            "Herbalism Kit"
+        ],
+        "armor_training": [
+            "Light armor"
+        ],
+        "starting_equipment": [
+            {
+                "option": "A",
+                "items": "Leather Armor, Sickle, 2 Daggers, Arcane Focus (orb), Explorer’s Pack, and 5 GP"
+            },
+            {
+                "option": "B",
+                "items": "50 GP"
+            }
+        ],
+        "class_features": [
+            {
+                "level": 1,
+                "name": "Spellcasting",
+                "description": "You use Charisma as your spellcasting ability and an Arcane Focus. You prepare a list of spells from the Witch spell list and regain slots on a Long Rest. You can choose Hexes when picking cantrips."
+            },
+            {
+                "level": 1,
+                "name": "Witch’s Curse",
+                "description": "Choose a curse: Burned (Fire resistance, Produce Flame), Drowned (Breathe underwater, Swim speed), Feral (Survival proficiency, AC 13 + Dex), Hideous (Intimidation proficiency, Frighten on Initiative), Hollow (Temp HP on kill), Infested (Beasts have disadvantage vs you, Swarm familiar), Loveless (Charmed immunity), Possessed (Extra prepared spells), Starving (No exhaustion from hunger, Poison resistance/advantage), Visions (Initiative bonus), or Whispers (60ft Telepathy)."
+            },
+            {
+                "level": 1,
+                "name": "Hexes",
+                "description": "You learn two Hex cantrips. They do not count against your number of cantrips known."
+            },
+            {
+                "level": 2,
+                "name": "Cackle",
+                "description": "Bonus Action: Extend the duration of one of your Hexes by 1 round if the target is within range."
+            },
+            {
+                "level": 2,
+                "name": "Familiar",
+                "description": "You always have Find Familiar prepared. Your familiar gains bonus HP (2x level), uses your spell attack modifier, and adds your Proficiency Bonus to AC/saves/damage. It can attack once per turn as your action/bonus action."
+            },
+            {
+                "level": 3,
+                "name": "Witch Subclass",
+                "description": "You gain a Witch subclass of your choice, granting features at levels 3, 6, 10, and 14."
+            },
+            {
+                "level": 4,
+                "name": "Ability Score Improvement",
+                "description": "You gain the Ability Score Improvement feat or another feat for which you qualify. You gain this feature again at levels 8, 12, and 16."
+            },
+            {
+                "level": 5,
+                "name": "Insidious Spell",
+                "description": "Creatures failing saves against your Hexes have Disadvantage on saves against your Witch spells until your next turn, and vice versa."
+            },
+            {
+                "level": 7,
+                "name": "Improved Familiar",
+                "description": "Your familiar's attacks can deal Force damage. You gain more exotic familiar form options (Imp, Quasit, etc.)."
+            },
+            {
+                "level": 9,
+                "name": "Hastened Hex",
+                "description": "Once per turn when you cast a Hex as a Magic action, you can cast a non-Hex action cantrip as part of the same casting."
+            },
+            {
+                "level": 11,
+                "name": "Grand Hex",
+                "description": "You learn one Grand Hex. You gain more at levels 13, 15, and 17."
+            },
+            {
+                "level": 18,
+                "name": "Vengeful Curse",
+                "description": "Reaction (when you or an ally within 60ft becomes Bloodied): Curse the attacker to have Disadvantage on D20 Tests until the end of your next turn. Once per Long Rest."
+            },
+            {
+                "level": 19,
+                "name": "Epic Boon",
+                "description": "You gain an Epic Boon feat or another feat of your choice for which you qualify."
+            },
+            {
+                "level": 20,
+                "name": "Hexmaster",
+                "description": "When you cast a Hex requiring a save, you can force one target to automatically fail. Uses equal to Charisma modifier per Long Rest (or spend a spell slot)."
+            }
+        ],
+        "subclasses": [
+            {
+                "name": "Black Magic",
+                "features": [
+                    {
+                        "level": 3,
+                        "name": "Black Magic Spells",
+                        "description": "You always have specific spells prepared, such as Exhume and Animate Dead."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Decay",
+                        "description": "You learn the Hex: Decay cantrip (1d6 Necrotic damage per turn, Con save)."
+                    },
+                    {
+                        "level": 6,
+                        "name": "Undeath Command",
+                        "description": "Command Undead as a bonus action. One Undead from Animate Dead can gain Witch Familiar benefits."
+                    },
+                    {
+                        "level": 10,
+                        "name": "Life Tether",
+                        "description": "Reaction (when damaged): Transfer half damage to your Hex target. Restore use by spending a level 2+ slot."
+                    },
+                    {
+                        "level": 14,
+                        "name": "Grim Sacrifice",
+                        "description": "Magic Action: Kill your familiar to deal 8d10 Necrotic damage in a 20ft emanation. Restore use by spending a level 6+ slot."
+                    }
+                ]
+            },
+            {
+                "name": "Blood Magic",
+                "features": [
+                    {
+                        "level": 3,
+                        "name": "Blood Spells",
+                        "description": "You always have specific spells prepared, such as Acid Arrow and Vampiric Touch."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Blood Curse",
+                        "description": "You learn the Hex: Blood Curse cantrip (target drops to 0 HP if below a threshold)."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Arcane Bloodletting",
+                        "description": "Take 5 Necrotic damage to cast an action spell as a Bonus Action. Uses equal to Charisma modifier."
+                    },
+                    {
+                        "level": 6,
+                        "name": "Deathseeker",
+                        "description": "Detect wounded/invisible creatures within 60ft. Advantage on tracking damaged targets."
+                    },
+                    {
+                        "level": 10,
+                        "name": "Hemomantic Recovery",
+                        "description": "Short Rest: Expend Hit Point Dice to recover level 1-5 spell slots."
+                    },
+                    {
+                        "level": 14,
+                        "name": "Sanguine",
+                        "description": "When damaging your Hex target with a spell slot, take 5+ Necrotic damage to deal extra 1d8 Necrotic damage per 5 taken."
+                    }
+                ]
+            },
+            {
+                "name": "Green Magic",
+                "features": [
+                    {
+                        "level": 3,
+                        "name": "Green Magic Spells",
+                        "description": "You always have specific spells prepared, such as Barkskin and Plant Growth."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Elder Tongue",
+                        "description": "You can cast Speak with Animals without a spell slot."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Primal Ally",
+                        "description": "Your familiar's bonus HP increases to 3x your level."
+                    },
+                    {
+                        "level": 6,
+                        "name": "Twin Familiar",
+                        "description": "Summon two identical familiars that share a HP pool but act on separate turns."
+                    },
+                    {
+                        "level": 10,
+                        "name": "Vital Nourishment",
+                        "description": "Long Rest: Restore plant life and grant allies Temp HP and condition removal."
+                    },
+                    {
+                        "level": 14,
+                        "name": "Sacrificial Familiar",
+                        "description": "Reaction: Command familiar to take an attack meant for you. Uses equal to Charisma modifier."
+                    }
+                ]
+            },
+            {
+                "name": "Purple Magic",
+                "features": [
+                    {
+                        "level": 3,
+                        "name": "Purple Magic Spells",
+                        "description": "You always have specific spells prepared, such as Disguise Self and Major Image."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Hallucination",
+                        "description": "You learn the Hex: Hallucination cantrip (Reaction to give target Disadvantage on D20 Tests)."
+                    },
+                    {
+                        "level": 6,
+                        "name": "False Authority",
+                        "description": "Modify Disguise Self to appear as a figure of authority to observers."
+                    },
+                    {
+                        "level": 10,
+                        "name": "Deceitful Transposition",
+                        "description": "Bonus Action: Disguise two creatures to look/sound like they swapped places. Uses equal to Charisma modifier."
+                    },
+                    {
+                        "level": 14,
+                        "name": "Waking Nightmare",
+                        "description": "Force a creature failing against Hex: Hallucination to become Frenzied for 1 minute. Restore use by spending a level 2+ slot."
+                    }
+                ]
+            },
+            {
+                "name": "Red Magic",
+                "features": [
+                    {
+                        "level": 3,
+                        "name": "Red Magic Spells",
+                        "description": "You always have specific spells prepared, such as Burning Hands and Fireball."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Imperil",
+                        "description": "You learn the Hex: Imperil cantrip (strip or bypass damage resistances)."
+                    },
+                    {
+                        "level": 6,
+                        "name": "Convolute Energy",
+                        "description": "Change the damage type of an elemental effect within 60ft. Uses equal to Charisma modifier."
+                    },
+                    {
+                        "level": 10,
+                        "name": "Invulnerability",
+                        "description": "Reaction: Reduce incoming damage by 50. Restore use by spending a level 4+ slot."
+                    },
+                    {
+                        "level": 14,
+                        "name": "Elemental Annihilation",
+                        "description": "Expend an extra slot to deal maximum damage with an elemental Witch spell. Once per Long Rest."
+                    }
+                ]
+            },
+            {
+                "name": "Steel Magic",
+                "features": [
+                    {
+                        "level": 3,
+                        "name": "Steel Spells",
+                        "description": "You always have specific spells prepared, such as Shield and Haste."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Martial Training",
+                        "description": "Gain proficiency with non-heavy Martial weapons, Medium armor, and Shields."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Soulsteel",
+                        "description": "Bonus Action: Absorb familiar into a melee weapon for extra 1d6 damage and use as a focus."
+                    },
+                    {
+                        "level": 6,
+                        "name": "Extra Attack",
+                        "description": "Attack twice per action; can replace one attack with an action cantrip."
+                    },
+                    {
+                        "level": 10,
+                        "name": "Insidious Smite",
+                        "description": "Once per turn on hit, expend a slot for extra 1d8 damage per slot level."
+                    },
+                    {
+                        "level": 14,
+                        "name": "Hexplate",
+                        "description": "Gain physical damage resistance against your Hex target."
+                    }
+                ]
+            },
+            {
+                "name": "Tea Magic",
+                "features": [
+                    {
+                        "level": 3,
+                        "name": "Tea Spells",
+                        "description": "You always have specific spells prepared, such as Augury and Sanctuary."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Tasseography",
+                        "description": "Bonus Action: Roll a d20 to replace a future D20 Test within 60ft. Uses equal to Charisma modifier."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Tea Ceremony",
+                        "description": "Short/Long Rest: Brew tea for 6 allies to reduce Exhaustion by 1."
+                    },
+                    {
+                        "level": 6,
+                        "name": "Shapes and Omens",
+                        "description": "Long Rest: Gain Heroic Inspiration by interpreting tea leaf shapes."
+                    },
+                    {
+                        "level": 10,
+                        "name": "Herbal Remedy",
+                        "description": "Allies drinking tea gain: Temp HP, Poison resistance/save advantage, or Restoration."
+                    },
+                    {
+                        "level": 14,
+                        "name": "As Foretold",
+                        "description": "Regain all Tasseography uses on Initiative."
+                    }
+                ]
+            },
+            {
+                "name": "Technicolor Magic",
+                "features": [
+                    {
+                        "level": 3,
+                        "name": "Technicolor Spells",
+                        "description": "You always have specific spells prepared, such as Color Spray and Fly."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Musical Interlude",
+                        "description": "You learn the Hex: Musical Interlude cantrip (grant Temp HP in 30ft emanation)."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Animal Friends",
+                        "description": "Gain Animal Handling proficiency with Charisma bonus. Can adopt a Beast as a 'Pocket Pet'."
+                    },
+                    {
+                        "level": 6,
+                        "name": "Friendship Bracelet",
+                        "description": "Magic Action: Create bracelets (up to Charisma mod) that allow Help as a bonus action and targeting from range."
+                    },
+                    {
+                        "level": 10,
+                        "name": "Positivity",
+                        "description": "Reaction: Gain AC bonus equal to number of nearby friendly creatures. Restore use by spending a level 2+ slot."
+                    },
+                    {
+                        "level": 14,
+                        "name": "Redemption Arc",
+                        "description": "Reaction: Spare a dying enemy to make them Friendly and Unconscious (1 HP). Once per Long Rest."
+                    }
+                ]
+            },
+            {
+                "name": "White Magic",
+                "features": [
+                    {
+                        "level": 3,
+                        "name": "White Magic Spells",
+                        "description": "You always have specific spells prepared, such as Cure Wounds and Revivify."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Remedy",
+                        "description": "Gain a pool of d6s (equal to level) to heal yourself or others as an action/bonus action."
+                    },
+                    {
+                        "level": 6,
+                        "name": "Talisman of Protection",
+                        "description": "Craft a talisman that grants +d4 to all saving throws for the wearer."
+                    },
+                    {
+                        "level": 10,
+                        "name": "Benevolent Surge",
+                        "description": "Reaction (when damaged): Heal target for 1d10 + Charisma. Restore use by spending a level 2+ slot."
+                    },
+                    {
+                        "level": 14,
+                        "name": "Witch’s Gift",
+                        "description": "Restoring HP to a creature grants them +3 AC until the end of your next turn."
+                    }
+                ]
+            }
+        ]
+    }
+}

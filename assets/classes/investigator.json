@@ -1,0 +1,370 @@
+{
+    "class": {
+        "name": "Investigator",
+        "description": "Supernatural detectives andmonster slayers, Investigators are always on the hunt for malevolent outsiders.Whenever evil seeps into the world—be it Fiends, Undead, or strange Aberrationsfrom beyond the stars—Investigators will be the first to locate them and banishtheir foul corruption from the mortal plane.",
+        "primary_abilities": [
+            "Dexterity",
+            "Intelligence"
+        ],
+        "hit_die": "d8",
+        "saving_throw_proficiencies": [
+            "Dexterity",
+            "Intelligence"
+        ],
+        "skill_proficiencies": {
+            "choose": 3,
+            "options": [
+                "Arcana",
+                "Athletics",
+                "Deception",
+                "History",
+                "Insight",
+                "Intimidation",
+                "Investigation",
+                "Medicine",
+                "Nature",
+                "Perception",
+                "Persuasion",
+                "Religion",
+                "Sleight of Hand",
+                "Stealth"
+            ]
+        },
+        "weapon_proficiencies": [
+            "Simple weapons",
+            "Martial weapons"
+        ],
+        "armor_training": [
+            "Light armor"
+        ],
+        "starting_equipment": [
+            {
+                "option": "A",
+                "items": "Leather Armor, 2 Daggers, Rapier, HeavyCrossbow, 20 Bolts, Crossbow Bolt Case, Dungeoneer’s Pack, and 17 GP"
+            },
+            {
+                "option": "B",
+                "items": "120 GP"
+            }
+        ],
+        "class_features": [
+            {
+                "level": 1,
+                "name": "Ritualist",
+                "description": "You gain a grimoire containing four level 1Investigator spells. You can cast any spell in your grimoire as a Ritual if ithas the Ritual tag. You add two spells to your grimoire whenever you gain anInvestigator level."
+            },
+            {
+                "level": 1,
+                "name": "Weapon Mastery",
+                "description": "You can use the mastery properties of two kinds of weapons of your choice withwhich you have proficiency. You can change these choices whenever you finish aLong Rest."
+            },
+            {
+                "level": 2,
+                "name": "Expertise",
+                "description": "You gainExpertise in two of your skill proficiencies. You gain Expertise in two moreskills at level 9."
+            },
+            {
+                "level": 2,
+                "name": "Finisher",
+                "description": "Onceper turn when you deal damage with a weapon to a creature that is Bloodied, youdeal an extra 1d8 damage. This damage increases at levels 11 and 17."
+            },
+            {
+                "level": 2,
+                "name": "Rushed Incantation",
+                "description": "You can cast any spellin your grimoire with a casting time of an action or Bonus Action as a BonusAction. You have 3 uses, regaining one on a Short Rest and all on a Long Rest.Uses increase at higher levels."
+            },
+            {
+                "level": 3,
+                "name": "InvestigatorSubclass",
+                "description": "You gain an Investigator subclass of your choice,granting features at levels 3, 6, 10, and 14."
+            },
+            {
+                "level": 3,
+                "name": "Trinkets",
+                "description": "Your subclass grants you supernatural trinkets. Youcan use this feature twice, regaining one use on a Short Rest and all on a LongRest. Uses increase at higher levels."
+            },
+            {
+                "level": 4,
+                "name": "Ability ScoreImprovement",
+                "description": "You gain the Ability Score Improvement feat oranother feat for which you qualify. You gain this feature again at levels 8, 12,and 16."
+            },
+            {
+                "level": 5,
+                "name": "Exploit Weakness",
+                "description": "Once perturn when you deal damage to a creature with a weapon attack, you can grant itDamage Vulnerability to one of the attack's damage types or Disrupt itsResistance until the start of your next turn."
+            },
+            {
+                "level": 7,
+                "name": "HolyTrinkets",
+                "description": "You gain access to new trinket options: Amulet ofWarding, Restorative Ankh, and Rune of Banishment."
+            },
+            {
+                "level": 11,
+                "name": "Improved Finisher",
+                "description": "You can use your Finisher on a creaturethat isn't Bloodied, dealing an extra 1d8 damage (increasing to 2d8 atlevel 17)."
+            },
+            {
+                "level": 13,
+                "name": "Enigma Arcane",
+                "description": "You cancast a level 7 spell from a specific list without a spell slot once per LongRest. You gain level 8 and 9 spells at levels 15 and 17."
+            },
+            {
+                "level": 18,
+                "name": "Supernatural Resolve",
+                "description": "You have Advantage on savingthrows against spells and other magical effects unless you are Incapacitated."
+            },
+            {
+                "level": 19,
+                "name": "Epic Boon",
+                "description": "You gain an Epic Boonfeat or another feat of your choice for which you qualify."
+            },
+            {
+                "level": 20,
+                "name": "Spellbinder",
+                "description": "Choose 5 level 1-3 spells in yourgrimoire. You can cast them using Rushed Incantation without expending a use ofthe feature."
+            }
+        ],
+        "subclasses": [
+            {
+                "name": "Antiquarian",
+                "features": [
+                    {
+                        "level": 3,
+                        "name": "Artifact Hoarder",
+                        "description": "You gain one additionaluse of your Trinkets before a Long Rest."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Trinkets",
+                        "description": "You gain access to the Hateful Arrowhead, Warped Prism, andRazortooth Bandages trinkets."
+                    },
+                    {
+                        "level": 6,
+                        "name": "Arcane Relics",
+                        "description": "You gain access to powerful relics: Antediluvian Dynamo, Lich’sDeathmask, and Mortal Coil. Once used, you must finish a Short or Long Rest touse this feature again."
+                    },
+                    {
+                        "level": 10,
+                        "name": "Magic Item Collection",
+                        "description": "After a Long Rest, you can magically produce one magic item froma specific list. You can attune to it instantly."
+                    },
+                    {
+                        "level": 14,
+                        "name": "Soul Jar",
+                        "description": "You gain a soul jar that holds 5 charges. You canexpend charges for Temporary HP, Trinket Recharge, Undead Fortitude, or aDraining Touch attack."
+                    }
+                ]
+            },
+            {
+                "name": "Archivist",
+                "features": [
+                    {
+                        "level": 3,
+                        "name": "Trinkets",
+                        "description": "You gain access to the AuraLenses, Mnemonic Script, and Tongue Stone trinkets."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Thesis",
+                        "description": "Choose a thesis (Corpus, Mentis, Mortis, or Oculus) toadd specific spells to your grimoire for free. You can change your thesis whenyou gain a level."
+                    },
+                    {
+                        "level": 6,
+                        "name": "Erudite Spell",
+                        "description": "When you cast a spell that forces a saving throw, you can give one targetDisadvantage on the save. Regain use on Short/Long Rest or by expending a RushedIncantation."
+                    },
+                    {
+                        "level": 10,
+                        "name": "Encyclopedic Expertise",
+                        "description": "You can automatically identify any non-unique arcane effect, spell, or magicitem you see or hear."
+                    },
+                    {
+                        "level": 14,
+                        "name": "Eidetic Memory",
+                        "description": "You gain Ritual Recall (copy spells you see cast) and SpellDuplication (expend Rushed Incantation to cast a level 5 or lower spell you justsaw)."
+                    }
+                ]
+            },
+            {
+                "name": "Detective",
+                "features": [
+                    {
+                        "level": 3,
+                        "name": "Uncanny Hunch",
+                        "description": "Add your Investigator level to an Intelligenceor Wisdom (Insight) check. Uses equal to Intelligence modifier per Long Rest."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Trinkets",
+                        "description": "You gain access to theFogstone Periapt, Glass Medallion, and Skeleton’s Key trinkets."
+                    },
+                    {
+                        "level": 6,
+                        "name": "Predictive Intuition",
+                        "description": "Bonus Action:Examine a creature within 30 feet. Gain +1d6 to attack rolls against it and ittakes -1d6 to attack rolls against you until your next turn."
+                    },
+                    {
+                        "level": 10,
+                        "name": "Interrogator’s Instinct",
+                        "description": "You gain EnchantmentDetection, Illusion Detection (Advantage), and Lie Detection (Advantage)."
+                    },
+                    {
+                        "level": 14,
+                        "name": "Power of Deduction",
+                        "description": "You can use yourPredictive Intuition on a target an unlimited number of times."
+                    }
+                ]
+            },
+            {
+                "name": "Exterminator",
+                "features": [
+                    {
+                        "level": 3,
+                        "name": "Silvered Shield",
+                        "description": "Gain training with Medium armor and Shields. You can addIntelligence instead of Dexterity to AC while wearing Medium armor."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Trinkets",
+                        "description": "You gain access to theConsecrated Whetstone, Gilded Dragon Scale, and Mimic-Tooth Necklace trinkets."
+                    },
+                    {
+                        "level": 6,
+                        "name": "Monster Slayer",
+                        "description": "Bonus Action: Makeone weapon attack or Unarmed Strike. Uses equal to Intelligence modifier perShort/Long Rest."
+                    },
+                    {
+                        "level": 10,
+                        "name": "Silvered Edge",
+                        "description": "Yougain Flexible Mastery (replace mastery with Sap or Vex) and Supernatural Strikes(deal Force damage)."
+                    },
+                    {
+                        "level": 14,
+                        "name": "Killer Instinct",
+                        "description": "You can use your Exploit Weakness twice on your turn, but notagainst the same target."
+                    }
+                ]
+            },
+            {
+                "name": "Inquisitor",
+                "features": [
+                    {
+                        "level": 3,
+                        "name": "Exorcist’S Doctrines",
+                        "description": "Add ConsecratedArmor to your grimoire. Gain Dogma (treat Religion check rolls of 9 or loweras 10)."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Trinkets",
+                        "description": "You gain access tothe Alabaster Balm, Hallowed Chalice, and Reliquary of Doubt trinkets."
+                    },
+                    {
+                        "level": 6,
+                        "name": "Divine Strike",
+                        "description": "Once per turn on hit, dealan extra 1d8 Necrotic or Radiant damage."
+                    },
+                    {
+                        "level": 10,
+                        "name": "RotePiety",
+                        "description": "You can use your Holy Relics three times withoutexpending a use of your Trinkets per Long Rest."
+                    },
+                    {
+                        "level": 14,
+                        "name": "Excommunication",
+                        "description": "Bonus Action: Mark a creature within 60 feet.It takes 6d6 Radiant damage per turn and suffers various debuffs. Regain use onLong Rest or by expending Rushed Incantation."
+                    }
+                ]
+            },
+            {
+                "name": "Medium",
+                "features": [
+                    {
+                        "level": 3,
+                        "name": "Foretelling",
+                        "description": "After a LongRest, roll two d20s. You can use these rolls to replace any D20 Test you seeonce per turn."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Trinkets",
+                        "description": "You gainaccess to the Dead Ringer, Heptagonal Spectacles, and Lucent Mirror trinkets."
+                    },
+                    {
+                        "level": 6,
+                        "name": "Foretold Demise",
+                        "description": "Once per turn onweapon damage, replace one damage die with a foretelling roll."
+                    },
+                    {
+                        "level": 10,
+                        "name": "Whispers From Beyond",
+                        "description": "Magic Action:Receive a one-word hint from the GM. Regain use on Long Rest or by expendingRushed Incantation."
+                    },
+                    {
+                        "level": 14,
+                        "name": "Third Eye",
+                        "description": "Bonus Action: Cast True Seeing without a slot. Gain Advantage on your firstattack each turn for the duration."
+                    }
+                ]
+            },
+            {
+                "name": "Occultist",
+                "features": [
+                    {
+                        "level": 3,
+                        "name": "Trinkets",
+                        "description": "You gain access to the ColdIron Pendant, Dead Mist Vial, and Engraved Lens trinkets."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Pact Magic",
+                        "description": "You gain Warlock spellcasting usingIntelligence. You regain slots on a Short or Long Rest."
+                    },
+                    {
+                        "level": 6,
+                        "name": "Eldritch Ruin",
+                        "description": "Cast a Warlock cantrip as a BonusAction. Uses equal to Intelligence modifier per Long Rest."
+                    },
+                    {
+                        "level": 10,
+                        "name": "Eyes Of Another World",
+                        "description": "You gain See Invisibility,Sense Spellcasters, and Discern Otherworldly Origins."
+                    },
+                    {
+                        "level": 14,
+                        "name": "Maleficium",
+                        "description": "When using Exploit Weakness, cast Bestow Curse asa Bonus Action without a slot. Regain use on Short/Long Rest or by expendingRushed Incantation."
+                    }
+                ]
+            },
+            {
+                "name": "Spy",
+                "features": [
+                    {
+                        "level": 3,
+                        "name": "Bravado",
+                        "description": "Add Intelligence modifier to Charisma (Deception andPersuasion) checks."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Trinkets",
+                        "description": "Yougain access to the Glass Dust, Horn-Rimmed Glasses, and Martini Glass trinkets."
+                    },
+                    {
+                        "level": 6,
+                        "name": "Cloak And Dagger",
+                        "description": "Deal extra Forcedamage equal to your Investigator level on the first round of combat if thetarget hasn't acted or you have Advantage."
+                    },
+                    {
+                        "level": 10,
+                        "name": "BodyDouble",
+                        "description": "Magic Action: Assume the identity of a humanoid orfresh corpse. Regain use on Short/Long Rest or by expending Rushed Incantation."
+                    },
+                    {
+                        "level": 14,
+                        "name": "Glib",
+                        "description": "Cast Glibness once per LongRest without a slot or material components. Take the Influence action as a BonusAction for the duration."
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -43,3 +43,11 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+# Isar Database Files
+*.isar
+*.isar.lock
+
+# (Optional but recommended) 
+# We DO want to commit the generated *.g.dart files so your CI/CD pipeline 
+# doesn't have to waste time running build_runner on every push.

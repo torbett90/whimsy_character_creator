@@ -1,0 +1,393 @@
+{
+    "class": {
+        "name": "Martyr",
+        "description": "Martyrs are implements of thegods, handpicked to die in service of a divine cause. They are prophets andoracles, great priests and liberators, whose power is derived from mortalsuffering and divine sacrifice.",
+        "primary_abilities": [
+            "Strength orDexterity",
+            "Wisdom"
+        ],
+        "hit_die": "d12",
+        "saving_throw_proficiencies": [
+            "Strength",
+            "Wisdom"
+        ],
+        "skill_proficiencies": {
+            "choose": 2,
+            "options": [
+                "Athletics",
+                "History",
+                "Insight",
+                "Intimidation",
+                "Medicine",
+                "Persuasion",
+                "Religion"
+            ]
+        },
+        "weapon_proficiencies": [
+            "Simple weapons",
+            "Martial weapons"
+        ],
+        "armor_training": [
+            "Light armor",
+            "Shields"
+        ],
+        "starting_equipment": [
+            {
+                "option": "A",
+                "items": "Chain Shirt, Shield, Longsword, 6 Javelins, HolySymbol, Priest’s Pack, and 54 GP"
+            },
+            {
+                "option": "B",
+                "items": "Studded LeatherArmor, 2 Daggers, 2 Shortswords, Longbow, 20 Arrows, Quiver, Holy Symbol,Priest’s Pack, and 11 GP"
+            },
+            {
+                "option": "C",
+                "items": "170 GP"
+            }
+        ],
+        "class_features": [
+            {
+                "level": 1,
+                "name": "Armor of Faith",
+                "description": "Choose one: Anointed Armor (training with Medium armor; add Wisdom modifierinstead of Dexterity to AC while wearing armor) or Unarmored Defense (ACequals 10 + Dexterity + Wisdom while not wearing armor; can use a Shield)."
+            },
+            {
+                "level": 1,
+                "name": "Spellcasting",
+                "description": "You take Radiant damage(ignoring resistance/immunity and bypassing Temp HP) to create spell slots: 1st(5), 2nd (10), 3rd (20), 4th (30), 5th (45). You have a limited number of spelluses per Long Rest. Wisdom is your spellcasting ability. You cannot regain HPfrom any spell you cast."
+            },
+            {
+                "level": 1,
+                "name": "Weapon Mastery",
+                "description": "You can use the mastery properties of two kinds of weapons ofyour choice with which you have proficiency. You can change these choiceswhenever you finish a Long Rest."
+            },
+            {
+                "level": 2,
+                "name": "Miraculous Healing",
+                "description": "Bonus Action: Expend unexpended Hit Point Dice (up to half yourMartyr level) to regain HP equal to the roll plus your Constitution modifier perdie."
+            },
+            {
+                "level": 2,
+                "name": "Reprisal",
+                "description": "Reaction (whendamaged by a creature within 5ft): Halve the damage taken. The attackertakes 1d6 Necrotic or Radiant damage (scales at levels 5, 11, and 17)."
+            },
+            {
+                "level": 3,
+                "name": "Martyr Subclass",
+                "description": "You gain a Martyrsubclass of your choice, granting features at levels 3, 6, 14, and 18."
+            },
+            {
+                "level": 3,
+                "name": "Sacrifice",
+                "description": "Sacrificial Strike: BonusAction on melee hit, take 5 Radiant damage to deal an extra 10 Radiant damage.Sacrificial Skill: Once per turn on failed D20 Test, take 10 Radiant damage fora +5 bonus (no damage if test still fails)."
+            },
+            {
+                "level": 4,
+                "name": "AbilityScore Improvement",
+                "description": "You gain the Ability Score Improvement feator another feat for which you qualify. You gain this feature again atlevels 8, 12, and 16."
+            },
+            {
+                "level": 5,
+                "name": "Extra Attack",
+                "description": "You can attack twice instead of once whenever you take the Attack action onyour turn."
+            },
+            {
+                "level": 7,
+                "name": "Sacrifice Foe",
+                "description": "When anattack or damage roll improved by Sacrifice reduces an enemy to 0 HP, you don'ttake the Radiant damage from the feature."
+            },
+            {
+                "level": 9,
+                "name": "DivineRespite",
+                "description": "Short Rest: Regain up to 3 expended Hit Point Dice (6at level 13, 10 at level 17). Once per Long Rest."
+            },
+            {
+                "level": 10,
+                "name": "Undying",
+                "description": "When reduced to 0 HP but not killed outright, dropto 1 HP instead and immediately use Miraculous Healing (no action). Once perLong Rest."
+            },
+            {
+                "level": 11,
+                "name": "Improved Sacrificial Strike",
+                "description": "Sacrificial Strike can take 10 Radiant damage to deal 20 Radiantdamage. At level 17, the first use per turn requires no Bonus Action."
+            },
+            {
+                "level": 15,
+                "name": "March Unto Destiny",
+                "description": "You don't need to eator drink, and gain Immunity to the Paralyzed, Petrified, and Stunnedconditions."
+            },
+            {
+                "level": 19,
+                "name": "Epic Boon",
+                "description": "You gain anEpic Boon feat or another feat of your choice for which you qualify."
+            },
+            {
+                "level": 20,
+                "name": "Final Martyrdom",
+                "description": "Magic Action: For 10minutes, gain Advantage on all D20 Tests, Immunity to all damage and mostconditions, and cast Wish once. At the end, you die permanently and cannot bereturned to life except by a god."
+            }
+        ],
+        "subclasses": [
+            {
+                "name": "Burden ofAtonement",
+                "features": [
+                    {
+                        "level": 3,
+                        "name": "Burden of Atonement Spells",
+                        "description": "You always have specific spells prepared, such as Cure Woundsand Sanctuary."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Redirection",
+                        "description": "Reaction(when ally within 5ft is hit): Force the attack to hit you instead. Restore useon Rest or by taking 5 Radiant damage."
+                    },
+                    {
+                        "level": 6,
+                        "name": "Sin Eater",
+                        "description": "Magic Action: Transfer negative effects (Exhaustion, Curses,Conditions) from willing creatures within 60ft to yourself. You have Advantageon saves to end them."
+                    },
+                    {
+                        "level": 14,
+                        "name": "Selfless Sacrifice",
+                        "description": "Sacrificial Challenge: Sacrificial Strike target hasDisadvantage on others. Sacrificial Luck: Sacrificial Skill success gives allieswithin 30ft +1d6 to their next D20 Test."
+                    },
+                    {
+                        "level": 18,
+                        "name": "Ever-Vigilant",
+                        "description": "Gain a special Reaction per turn usable onlyfor Reprisal or Redirection."
+                    }
+                ]
+            },
+            {
+                "name": "Burden of Discord",
+                "features": [
+                    {
+                        "level": 3,
+                        "name": "Burden of Discord Spells",
+                        "description": "You alwayshave specific spells prepared, such as Hideous Laughter and Inflict Wounds."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Havoc!",
+                        "description": "On melee hit, roll on the Havoc!table for a random effect. Restore use on Rest or by taking 5 Radiant damage."
+                    },
+                    {
+                        "level": 6,
+                        "name": "Coin of Chaos",
+                        "description": "Flip a coin to add +4(heads) or +1 (tails) to a D20 Test. The coin then passes to the GM to useagainst you."
+                    },
+                    {
+                        "level": 14,
+                        "name": "Pandemonium",
+                        "description": "UseHavoc! without taking Radiant damage and roll twice on the table, choosingeither result."
+                    },
+                    {
+                        "level": 18,
+                        "name": "Sacrificial Burst",
+                        "description": "Sacrificial Strike deals 2d10/4d10 Radiant damage. Highest damage dice explode(up to 10 extra dice)."
+                    }
+                ]
+            },
+            {
+                "name": "Burden of the End",
+                "features": [
+                    {
+                        "level": 3,
+                        "name": "Burden of the End Spells",
+                        "description": "You always havespecific spells prepared, such as Chromatic Orb and Sacred Flame."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Mystical Wisdom",
+                        "description": "Gain Arcana proficiencyand add Wisdom modifier to Arcana checks."
+                    },
+                    {
+                        "level": 3,
+                        "name": "SpellRecovery",
+                        "description": "Short Rest: Regain spell uses equal to Wisdommodifier. Once per Long Rest."
+                    },
+                    {
+                        "level": 6,
+                        "name": "Anointed Arcana",
+                        "description": "Radiant damage from casting End Spells is reduced by 10(minimum 5)."
+                    },
+                    {
+                        "level": 14,
+                        "name": "Sacrificial Spell",
+                        "description": "Take 10 Radiant damage to Heighten (Disadvantage on save) or Quicken (BonusAction casting) a spell."
+                    },
+                    {
+                        "level": 18,
+                        "name": "Vindictive Spell",
+                        "description": "Reaction (when damaged by enemy within 30ft): Cast a level 1-3spell on them with reduced Radiant cost."
+                    }
+                ]
+            },
+            {
+                "name": "Burden of Mercy",
+                "features": [
+                    {
+                        "level": 3,
+                        "name": "Burden of Mercy Spells",
+                        "description": "You always have specific spells prepared, such as Cure Wounds and Prayer ofHealing."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Balm",
+                        "description": "Miraculous Healingcan heal an ally within 60ft (1d8 per die) and end Blinded, Deafened, orPoisoned."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Merciful Healing",
+                        "description": "Youdon't take Radiant damage from casting Mercy Spells."
+                    },
+                    {
+                        "level": 6,
+                        "name": "Virtuous Blessings",
+                        "description": "Long Rest: Grant blessings (Alacrity,Eloquence, or Vigilance) to creatures up to your Wisdom modifier."
+                    },
+                    {
+                        "level": 14,
+                        "name": "Censuring Light",
+                        "description": "Magic Action: 30ftemanation damages specific creature types (4d6 Radiant) and grants alliesAdvantage on saves against them."
+                    },
+                    {
+                        "level": 18,
+                        "name": "Anointed Healer",
+                        "description": "Spells that restore HP heal an extra amount equal to your level(excess becomes Temp HP)."
+                    }
+                ]
+            },
+            {
+                "name": "Burden of Rebirth",
+                "features": [
+                    {
+                        "level": 3,
+                        "name": "Burden of Rebirth Spells",
+                        "description": "You always havespecific spells prepared, such as Entangle and Goodberry."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Natural Companion",
+                        "description": "Cast Find Familiar and Speak withAnimals without Radiant damage or spell use."
+                    },
+                    {
+                        "level": 6,
+                        "name": "Surefooted",
+                        "description": "Difficult terrain costs no extra movement foryou/allies within 30ft. Allies gain immunity to specific plant spells."
+                    },
+                    {
+                        "level": 14,
+                        "name": "Verdant Resilience",
+                        "description": "Bonus Action: For 1minute, gain regeneration (Wis mod HP/turn) and Resistance to physical damage.Once per Rest."
+                    },
+                    {
+                        "level": 18,
+                        "name": "Turn of the Wheel",
+                        "description": "Cast Reincarnate (no cost/components; choose species). Reincarnated Return: Ifyou die, return to life 24 hours later."
+                    }
+                ]
+            },
+            {
+                "name": "Burden ofRevolution",
+                "features": [
+                    {
+                        "level": 3,
+                        "name": "Burden of Revolution Spells",
+                        "description": "You always have specific spells prepared, such as Command andHeroism."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Revolutionary Spirit",
+                        "description": "Ranged Reprisal (use Reprisal within 60ft). Sacrificial Inspiration (take 5Radiant to give ally Heroic Inspiration)."
+                    },
+                    {
+                        "level": 6,
+                        "name": "Aura ofTenacity",
+                        "description": "30ft emanation grants allies a bonus to Initiativeequal to your Wisdom modifier."
+                    },
+                    {
+                        "level": 14,
+                        "name": "Kingslayer",
+                        "description": "On kill, choose: Assault (move and attack), Break Spells (endtarget's effects), or Shatter Morale (Frighten allies)."
+                    },
+                    {
+                        "level": 18,
+                        "name": "Rallying Strike",
+                        "description": "When you use Sacrificial Strike, anally within 30ft can use a Reaction to make a weapon attack."
+                    }
+                ]
+            },
+            {
+                "name": "Burden of Truth",
+                "features": [
+                    {
+                        "level": 3,
+                        "name": "Burden of Truth Spells",
+                        "description": "You always have specific spells prepared, such as Identify andLegend Lore."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Compelling Message",
+                        "description": "Gain Persuasion proficiency and add Wisdom modifier to Persuasion checks."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Forewarning",
+                        "description": "Magic Action: Warn ally ofperil (+5 AC against next hit). Restore use on Rest or by taking 5 Radiantdamage."
+                    },
+                    {
+                        "level": 6,
+                        "name": "Seer",
+                        "description": "You have Blindsightwith a range of 30 feet."
+                    },
+                    {
+                        "level": 14,
+                        "name": "Word of Revelation",
+                        "description": "Cast Word of Force, Terror, or Transience once each withoutRadiant damage or spell use per Rest."
+                    },
+                    {
+                        "level": 18,
+                        "name": "SacrificialForesight",
+                        "description": "Using Sacrificial Skill grants a +5 bonus to all D20Tests until the end of the turn."
+                    }
+                ]
+            },
+            {
+                "name": "Burden of Tyranny",
+                "features": [
+                    {
+                        "level": 3,
+                        "name": "Burden of Tyranny Spells",
+                        "description": "You always have specific spells prepared, such as Bane and Dominate Person."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Diabolic Presence",
+                        "description": "Gain Intimidationproficiency and add Wisdom modifier to Intimidation checks."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Vengeful Reprisal",
+                        "description": "Dealing Radiant damage withReprisal grants Advantage on attack rolls against that target."
+                    },
+                    {
+                        "level": 6,
+                        "name": "Death Stare",
+                        "description": "Magic Action or Initiative: Forcecreature within 60ft to save or be Frightened until end of next turn."
+                    },
+                    {
+                        "level": 14,
+                        "name": "Sacrificial Resilience",
+                        "description": "Once per turnafter Sacrificial Strike, gain Temp HP equal to the Radiant damage you took."
+                    },
+                    {
+                        "level": 18,
+                        "name": "Totalitarian Control",
+                        "description": "Cast Dominatespells once without cost per Long Rest. Gain buffs: Overpowering Command,Psychic Recoil, and Iron Grip."
+                    }
+                ]
+            }
+        ]
+    }
+}

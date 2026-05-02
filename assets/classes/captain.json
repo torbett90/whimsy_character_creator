@@ -1,0 +1,353 @@
+{
+    "class": {
+        "name": "Captain",
+        "description": "Decisive leaders and brilliantstrategists, Captains inspire their allies to greatness. They stand alongsidetheir Cohorts—their devoted lieutenants—whom they entrust with their lives.",
+        "primary_abilities": [
+            "Strength or Dexterity",
+            "Charisma"
+        ],
+        "hit_die": "d8",
+        "saving_throw_proficiencies": [
+            "Constitution",
+            "Charisma"
+        ],
+        "skill_proficiencies": {
+            "choose": 2,
+            "options": [
+                "Animal Handling",
+                "Athletics",
+                "Deception",
+                "History",
+                "Insight",
+                "Intimidation",
+                "Perception",
+                "Persuasion"
+            ]
+        },
+        "weapon_proficiencies": [
+            "Simple weapons",
+            "Martial weapons"
+        ],
+        "armor_training": [
+            "Light armor",
+            "Medium armor",
+            "Heavy armor",
+            "Shields"
+        ],
+        "starting_equipment": [
+            {
+                "option": "A",
+                "items": "Chain Mail, Shield,Longsword, 6 Javelins, Explorer’s Pack, and 27 GP"
+            },
+            {
+                "option": "B",
+                "items": "Studded Leather Armor, 2 Shortswords, Longbow, 20 Arrows, Quiver, Explorer’sPack, and 13 GP"
+            },
+            {
+                "option": "C",
+                "items": "140 GP"
+            }
+        ],
+        "class_features": [
+            {
+                "level": 1,
+                "name": "Battle Tactics",
+                "description": "You learn maneuversfueled by Battle Dice. You have two d6 Battle Dice. You regain all expendedBattle Dice when you roll Initiative or finish a Short or Long Rest. SavingThrow DC = 8 + Strength or Dexterity modifier + Proficiency Bonus."
+            },
+            {
+                "level": 1,
+                "name": "Weapon Mastery",
+                "description": "You can use the masteryproperties of two kinds of weapons of your choice with which you haveproficiency. You can change these choices whenever you finish a Long Rest."
+            },
+            {
+                "level": 2,
+                "name": "Cohort",
+                "description": "You gain a loyal Cohort. Youchoose a stat block (Berserker, Champion, Cultist, Hunter, Mage, Minstrel,Priest, Scoundrel, or Templar) and initiate them over 8 hours. In combat, theCohort takes its turn immediately before or after yours. It uses your Charismafor attack and damage rolls. Its Save DC = 8 + your Charisma modifier +Proficiency Bonus."
+            },
+            {
+                "level": 2,
+                "name": "Fighting Style",
+                "description": "You gain a Fighting Style feat of your choice. You can replace it with adifferent one whenever you gain a Captain level."
+            },
+            {
+                "level": 3,
+                "name": "Captain Subclass",
+                "description": "You gain a Captain subclass of your choice,granting features at levels 3, 6, 10, and 14."
+            },
+            {
+                "level": 4,
+                "name": "AbilityScore Improvement",
+                "description": "You gain the Ability Score Improvement feator another feat for which you qualify. You gain this feature again atlevels 8, 12, and 16."
+            },
+            {
+                "level": 5,
+                "name": "Blitz",
+                "description": "Once oneach of your turns, you can direct your Cohort or an ally within 60 feet to takea Reaction to move up to its Speed or make one attack with a weapon or UnarmedStrike."
+            },
+            {
+                "level": 7,
+                "name": "Valiant Surge",
+                "description": "Whenever youor your Cohort score a Critical Hit or reduce an enemy to 0 Hit Points, youregain an expended Battle Die."
+            },
+            {
+                "level": 11,
+                "name": "Coordinated Strike",
+                "description": "Once per turn when you hit with a weapon attack, you deal anextra 2d8 damage if your Cohort has dealt damage to that target since the end ofyour last turn."
+            },
+            {
+                "level": 15,
+                "name": "Lead by Example",
+                "description": "Whenever you or your Cohort score a Critical Hit, each ally you choosewithin 30 feet gains Heroic Inspiration."
+            },
+            {
+                "level": 18,
+                "name": "TeamworkManeuvers",
+                "description": "When you use a maneuver that targets an ally, youcan target a second ally within range without expending an additional BattleDie."
+            },
+            {
+                "level": 19,
+                "name": "Epic Boon",
+                "description": "You gain an EpicBoon feat or another feat of your choice for which you qualify."
+            },
+            {
+                "level": 20,
+                "name": "Legendary Commander",
+                "description": "Immediately afteranother creature’s turn, you can choose yourself or an ally within 60 feet totake a Legendary Action (Attack, Dash, Disengage, Dodge, Hide, Magic [cantriponly], or Utilize). You have three uses per Short or Long Rest."
+            }
+        ],
+        "maneuvers": [
+            {
+                "name": "Bolster",
+                "description": "Bonus Action: Expend 1Battle Die to motivate an ally within 60 feet. Their next attack before yournext turn adds the Battle Die to the attack and damage roll."
+            },
+            {
+                "name": "BornLeader",
+                "description": "When you fail a Wisdom or Charisma check, expend 1Battle Die to add it to the roll. Once per turn."
+            },
+            {
+                "name": "Morale Boost",
+                "description": "Reaction: When an ally within 60 feet fails a saving throw,expend 1 Battle Die and add it to the roll."
+            },
+            {
+                "name": "Rally",
+                "description": "Bonus Action: Expend 1 Battle Die to heal an ally within 60 feetfor [Battle Die roll + Charisma modifier] HP. Cannot heal a creature at 0 HP."
+            },
+            {
+                "name": "Staggering Strike",
+                "description": "Bonus Action (on hit):Expend 1 Battle Die to daze the target. Add the die to damage; the targetsubtracts the die from its next attack roll before the end of your next turn."
+            }
+        ],
+        "subclasses": [
+            {
+                "name": "Daggermark",
+                "features": [
+                    {
+                        "level": 3,
+                        "name": "Covert Tactics",
+                        "description": "Gain proficiency in Sleight of Hand andStealth. Add Charisma modifier to Initiative. Take the Hide action as a BonusAction."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Effortless Dodge [Maneuver]",
+                        "description": "Bonus Action: Expend 1 Battle Die to take the Disengage or Dodge action. Cannotuse while wearing Medium or Heavy armor."
+                    },
+                    {
+                        "level": 6,
+                        "name": "FlankingStrike",
+                        "description": "When you hit with a weapon attack, the next attack rollmade by an ally against that target before the end of your next turn hasAdvantage."
+                    },
+                    {
+                        "level": 10,
+                        "name": "Evasion",
+                        "description": "You and yourCohort take no damage on successful Dexterity saves against area effects, andhalf damage on failures."
+                    },
+                    {
+                        "level": 14,
+                        "name": "Preemptive Strike",
+                        "description": "Reaction: When a creature within 30 feet attacks you, make oneweapon attack against them first. Regain use on Short/Long Rest or byexpending 1 Battle Die."
+                    }
+                ]
+            },
+            {
+                "name": "Dragon Banner",
+                "features": [
+                    {
+                        "level": 3,
+                        "name": "Critical Focus",
+                        "description": "Weapon/Unarmed attackscrit on 19-20. Chain Critical: Critting or reducing an enemy to 0 HP increasescrit range (18-20, then 17-20, then 16-20) for 1 minute."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Rampage [Maneuver]",
+                        "description": "Reaction (after crit or reducingenemy to 0 HP with melee): Expend 1 Battle Die to move up to your Speed and makea melee attack. Add Battle Die to damage."
+                    },
+                    {
+                        "level": 6,
+                        "name": "MartialRecovery",
+                        "description": "Bonus Action: Regain all expended Battle Dice. Onceper Long Rest."
+                    },
+                    {
+                        "level": 10,
+                        "name": "Bloody Spectacle",
+                        "description": "When you crit or reduce an enemy to 0 HP, force chosen creatures in a 30-footemanation to make a Wisdom save or be Frightened for 1 minute. Regain use onShort/Long Rest or by expending 1 Battle Die."
+                    },
+                    {
+                        "level": 14,
+                        "name": "Coupde Grâce [Maneuver]",
+                        "description": "Bonus Action (on hit): Expend 2 BattleDice to attempt execution. Add dice to damage. If target drops to 0 HP, no diceare expended."
+                    }
+                ]
+            },
+            {
+                "name": "Eagle Banner",
+                "features": [
+                    {
+                        "level": 3,
+                        "name": "Eagle Eye [Maneuver]",
+                        "description": "Once per turn when you miss aranged attack, expend 1 Battle Die and add it to the roll."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Close-Quarters Shooting",
+                        "description": "Being within 5 feet of anenemy doesn't impose Disadvantage on ranged attacks. Cohort also gains thisbenefit."
+                    },
+                    {
+                        "level": 6,
+                        "name": "Vantage Point",
+                        "description": "Gain ClimbSpeed equal to your Speed. Gain Advantage on ranged attacks made from 15+ feetabove the target."
+                    },
+                    {
+                        "level": 10,
+                        "name": "Counter-Shot [Maneuver]",
+                        "description": "Reaction: When an enemy hits a creature with a ranged attack,expend 1 Battle Die to subtract it from their attack roll."
+                    },
+                    {
+                        "level": 14,
+                        "name": "Hundred-Arrow Volley",
+                        "description": "Replace one attack with ArrowRain (10ft radius, 40ft high cylinder) or Scatter Shot (20ft cone). Makeseparate attack rolls for each target."
+                    }
+                ]
+            },
+            {
+                "name": "Holy Icon",
+                "features": [
+                    {
+                        "level": 3,
+                        "name": "Theological Studies",
+                        "description": "GainReligion proficiency and add Charisma to Religion checks. Learn two Clericcantrips (Charisma-based)."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Minor Miracle",
+                        "description": "Rally heals 2 Battle Dice + Charisma. Can heal creatures at 0HP. Increases to 4 Battle Dice at level 10."
+                    },
+                    {
+                        "level": 6,
+                        "name": "ZealousFervor",
+                        "description": "Blitz allows Charmed/Frightened allies to reroll saves.Blitz attacks deal an extra 1d6 Radiant damage."
+                    },
+                    {
+                        "level": 10,
+                        "name": "Auraof Reprieve",
+                        "description": "Magic Action: 15ft emanation for 1 minute. Alliesstarting turns there choose: 2d8 Temp HP, Resistance to non-physical damage, orend Blinded/Deafened/Paralyzed/Poisoned. Regain use on Short/Long Rest or byexpending 2 Battle Dice."
+                    },
+                    {
+                        "level": 14,
+                        "name": "Raise Cohort",
+                        "description": "Cast Raise Dead without a slot. If used on Cohort, no materialcomponents needed and no initiation period required. Once per Long Rest."
+                    }
+                ]
+            },
+            {
+                "name": "Jolly Roger",
+                "features": [
+                    {
+                        "level": 3,
+                        "name": "Skirmish[Maneuver]",
+                        "description": "Bonus Action: Expend 1 Battle Die to make anattack. One attack must be melee and the other ranged."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Scallywag",
+                        "description": "You and your Cohort gain a Swim Speed equal to yourSpeed."
+                    },
+                    {
+                        "level": 6,
+                        "name": "Fancy Footwork",
+                        "description": "When you hita Large or smaller creature with a melee weapon, force it to move 5ft and youcan move 5ft without provoking Opportunity Attacks."
+                    },
+                    {
+                        "level": 10,
+                        "name": "Dirty Tactics",
+                        "description": "Once per turn on melee hit, choose: Flank(Cohort gets Advantage), Pocket Sand (Target gets Disadvantage), or Trip (Targetfalls Prone)."
+                    },
+                    {
+                        "level": 14,
+                        "name": "All Hands on Deck",
+                        "description": "Bonus Action: Allies within 30ft get Advantage on their next D20 test. Usesequal to Charisma modifier per Long Rest."
+                    }
+                ]
+            },
+            {
+                "name": "Lion Banner",
+                "features": [
+                    {
+                        "level": 3,
+                        "name": "Commanding Presence",
+                        "description": "IfBorn Leader fails, the Battle Die is not expended."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Challenge [Maneuver]",
+                        "description": "Bonus Action (on hit): Expend 1 BattleDie to goad target. Add die to damage. Target has Disadvantage on attacksagainst others while you are within 5ft."
+                    },
+                    {
+                        "level": 6,
+                        "name": "HighMorale",
+                        "description": "Use Morale Boost for multiple creatures failing thesame save for only 1 Battle Die."
+                    },
+                    {
+                        "level": 10,
+                        "name": "Vengeful Gambit",
+                        "description": "Reaction: When a challenged creature hits you, gain Resistanceto that damage and make an attack against them."
+                    },
+                    {
+                        "level": 14,
+                        "name": "Heroic Leadership",
+                        "description": "Using Bolster or Rally grants the targetHeroic Inspiration."
+                    }
+                ]
+            },
+            {
+                "name": "Tower Banner",
+                "features": [
+                    {
+                        "level": 3,
+                        "name": "Iron Wall [Maneuver]",
+                        "description": "Bonus Action:Expend 1 Battle Die. Add roll to AC against the next hit within 1 minute.Requires Heavy Armor."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Siege Defense",
+                        "description": "Can replace weapon mastery with Push or Slow. Gain +2 to ranged attacks whilein cover."
+                    },
+                    {
+                        "level": 6,
+                        "name": "Armored Redirection",
+                        "description": "Reaction: Force an attack hitting an ally within 5ft to target you instead.Regain use on Short/Long Rest or by expending 1 Battle Die."
+                    },
+                    {
+                        "level": 10,
+                        "name": "Mettle",
+                        "description": "You and your Cohort take no damage onsuccessful Constitution saves against half-damage effects, and half damage onfailures."
+                    },
+                    {
+                        "level": 14,
+                        "name": "Iron Retribution",
+                        "description": "When a creature within 5ft misses you, strike them with a Shield (no action) for 3d6Bludgeoning damage."
+                    }
+                ]
+            }
+        ]
+    }
+}

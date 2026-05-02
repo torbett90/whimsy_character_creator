@@ -1,0 +1,610 @@
+{
+    "class": {
+        "name": "Alchemist",
+        "description": "Whether their methods are explosive,transformative, or restorative, Alchemists transmute the world around them totheirliking.",
+        "primary_abilities": [
+            "Dexterity",
+            "Intelligence"
+        ],
+        "hit_die": "d8",
+        "saving_throw_proficiencies": [
+            "Dexterity",
+            "Intelligence"
+        ],
+        "proficiencies": {
+            "armor": [
+                "Lightarmor"
+            ],
+            "weapons": [
+                "Simple weapons"
+            ],
+            "tools": [
+                "Alchemist'sSupplies"
+            ],
+            "skills": {
+                "choose": 3,
+                "options": [
+                    "Arcana",
+                    "History",
+                    "Insight",
+                    "Medicine",
+                    "Nature",
+                    "Perception",
+                    "Sleightof Hand",
+                    "Survival"
+                ]
+            }
+        },
+        "starting_equipment": {
+            "option_a": [
+                "2 Daggers",
+                "LeatherArmor",
+                "Alchemist's Supplies",
+                "Alchemist's Fire",
+                "Scholar's Pack",
+                "6GP"
+            ],
+            "option_b": "160GP"
+        },
+        "class_table": [
+            {
+                "level": 1,
+                "proficiency_bonus": 2,
+                "features": [
+                    "Bombs",
+                    "Reagents",
+                    "PotionBrewing"
+                ],
+                "reagents": 2,
+                "bomb_formulae": 0,
+                "discoveries": 0
+            },
+            {
+                "level": 2,
+                "proficiency_bonus": 2,
+                "features": [
+                    "BombFormulae",
+                    "ReagentSynthesis"
+                ],
+                "reagents": 4,
+                "bomb_formulae": 3,
+                "discoveries": 0
+            },
+            {
+                "level": 3,
+                "proficiency_bonus": 2,
+                "features": [
+                    "AlchemistSubclass"
+                ],
+                "reagents": 6,
+                "bomb_formulae": 3,
+                "discoveries": 0
+            },
+            {
+                "level": 4,
+                "proficiency_bonus": 2,
+                "features": [
+                    "AbilityScoreImprovement"
+                ],
+                "reagents": 8,
+                "bomb_formulae": 4,
+                "discoveries": 0
+            },
+            {
+                "level": 5,
+                "proficiency_bonus": 3,
+                "features": [
+                    "Discoveries",
+                    "PotionBrewing"
+                ],
+                "reagents": 10,
+                "bomb_formulae": 4,
+                "discoveries": 1
+            },
+            {
+                "level": 6,
+                "proficiency_bonus": 3,
+                "features": [
+                    "Subclassfeature"
+                ],
+                "reagents": 12,
+                "bomb_formulae": 4,
+                "discoveries": 1
+            },
+            {
+                "level": 7,
+                "proficiency_bonus": 3,
+                "features": [
+                    "Evasion"
+                ],
+                "reagents": 14,
+                "bomb_formulae": 4,
+                "discoveries": 1
+            },
+            {
+                "level": 8,
+                "proficiency_bonus": 3,
+                "features": [
+                    "AbilityScoreImprovement"
+                ],
+                "reagents": 16,
+                "bomb_formulae": 5,
+                "discoveries": 1
+            },
+            {
+                "level": 9,
+                "proficiency_bonus": 4,
+                "features": [
+                    "PotionBrewing"
+                ],
+                "reagents": 18,
+                "bomb_formulae": 5,
+                "discoveries": 2
+            },
+            {
+                "level": 10,
+                "proficiency_bonus": 4,
+                "features": [
+                    "Subclassfeature"
+                ],
+                "reagents": 20,
+                "bomb_formulae": 5,
+                "discoveries": 2
+            },
+            {
+                "level": 11,
+                "proficiency_bonus": 4,
+                "features": [
+                    "BlastCoating"
+                ],
+                "reagents": 22,
+                "bomb_formulae": 5,
+                "discoveries": 2
+            },
+            {
+                "level": 12,
+                "proficiency_bonus": 4,
+                "features": [
+                    "AbilityScoreImprovement"
+                ],
+                "reagents": 24,
+                "bomb_formulae": 6,
+                "discoveries": 2
+            },
+            {
+                "level": 13,
+                "proficiency_bonus": 5,
+                "features": [
+                    "PotionBrewing"
+                ],
+                "reagents": 26,
+                "bomb_formulae": 6,
+                "discoveries": 3
+            },
+            {
+                "level": 14,
+                "proficiency_bonus": 5,
+                "features": [
+                    "Subclassfeature"
+                ],
+                "reagents": 28,
+                "bomb_formulae": 6,
+                "discoveries": 3
+            },
+            {
+                "level": 15,
+                "proficiency_bonus": 5,
+                "features": [
+                    "PotionMixologist"
+                ],
+                "reagents": 30,
+                "bomb_formulae": 6,
+                "discoveries": 3
+            },
+            {
+                "level": 16,
+                "proficiency_bonus": 5,
+                "features": [
+                    "AbilityScoreImprovement"
+                ],
+                "reagents": 32,
+                "bomb_formulae": 7,
+                "discoveries": 3
+            },
+            {
+                "level": 17,
+                "proficiency_bonus": 6,
+                "features": [
+                    "PotionBrewing"
+                ],
+                "reagents": 34,
+                "bomb_formulae": 7,
+                "discoveries": 4
+            },
+            {
+                "level": 18,
+                "proficiency_bonus": 6,
+                "features": [
+                    "Experimentalist"
+                ],
+                "reagents": 36,
+                "bomb_formulae": 7,
+                "discoveries": 4
+            },
+            {
+                "level": 19,
+                "proficiency_bonus": 6,
+                "features": [
+                    "EpicBoon"
+                ],
+                "reagents": 38,
+                "bomb_formulae": 8,
+                "discoveries": 4
+            },
+            {
+                "level": 20,
+                "proficiency_bonus": 6,
+                "features": [
+                    "Philosopher'sStone",
+                    "NuclearBomb"
+                ],
+                "reagents": 40,
+                "bomb_formulae": 8,
+                "discoveries": 4
+            }
+        ],
+        "features": {
+            "level_1": [
+                {
+                    "name": "Bombs",
+                    "description": "Youcan create volatile alchemical Bombs. They are Martial Ranged weapons (1d10 Fire+ Dex, Range 30/90, Finesse, Thrown, Destructible, Mastery:Explode).",
+                    "subfeatures": [
+                        {
+                            "name": "Bomb Mastery",
+                            "description": "You haveproficiency with Bombs and can use the Explode masteryproperty."
+                        },
+                        {
+                            "name": "Priming Bombs",
+                            "description": "When taking the Attackaction, you can prime a Bomb to add your Intelligence modifier to damage. Damageincreases at levels 5 (2d10), 11 (3d10), and 17 (4d10)."
+                        },
+                        {
+                            "name": "AlchemistSave DC",
+                            "description": "8 + Intelligence modifier + ProficiencyBonus."
+                        }
+                    ]
+                },
+                {
+                    "name": "Reagents",
+                    "description": "You have a pool of reagents used tobrew potions and empower Bombs. You regain one on a Short Rest and all on a LongRest.",
+                    "subfeatures": [
+                        {
+                            "name": "Empowered Bomb",
+                            "description": "Expend reagents(up to PB) to add 1d10 damage per reagent. Can also increase explosion radiusby 5ft per reagent."
+                        }
+                    ]
+                },
+                {
+                    "name": "Potion Brewing",
+                    "description": "Spend 10 minutesand reagents to brew potions (max total = Int modifier). Potions become inertafter a Long Rest. You can distill existing potions to recoverreagents."
+                }
+            ],
+            "level_2": [
+                {
+                    "name": "Bomb Formulae",
+                    "description": "Learn 3 formulaeto apply special effects to Bombs. Can replace one formula on a LongRest."
+                },
+                {
+                    "name": "Reagent Synthesis",
+                    "description": "Once per Long Rest, regainreagents equal to Int modifier (min 1) on a ShortRest."
+                }
+            ],
+            "level_3": [
+                {
+                    "name": "Alchemist Subclass",
+                    "description": "Choose asubclass that grants features at levels 3, 6, 10,and 14."
+                }
+            ],
+            "level_5": [
+                {
+                    "name": "Discoveries",
+                    "description": "Gain a discovery fromthe Discovery Options list. Gain more at higherlevels."
+                }
+            ],
+            "level_7": [
+                {
+                    "name": "Evasion",
+                    "description": "When you make a Dex savefor half damage, you take no damage on success and half onfailure."
+                }
+            ],
+            "level_11": [
+                {
+                    "name": "Blast Coating",
+                    "description": "Automaticallysucceed on saves against your own Bombs and take no damage fromthem."
+                }
+            ],
+            "level_15": [
+                {
+                    "name": "Potion Mixologist",
+                    "description": "Mix two potionsand drink them as a Bonus Action, gaining botheffects."
+                }
+            ],
+            "level_18": [
+                {
+                    "name": "Experimentalist",
+                    "description": "On a Long Rest,replace any Bomb Formulae and one Discovery."
+                }
+            ],
+            "level_19": [
+                {
+                    "name": "EpicBoon",
+                    "description": "Gain an Epic Boon feat or another feat for which youqualify."
+                }
+            ],
+            "level_20": [
+                {
+                    "name": "Philosopher's Stone",
+                    "description": "Gain astone providing: Regenerating Reagents (regain up to 6 on Initiative), QuickBrewing (Utilize action), and Longevity (age 1 year forevery 10)."
+                },
+                {
+                    "name": "Nuclear Bomb",
+                    "description": "Formula: Replace explosivecontents with Philosopher's Stone. Deals 10d10 + 100 Force damage in a 1-mileradius. Destroys thestone."
+                }
+            ]
+        },
+        "subclasses": [
+            {
+                "name": "Amorist",
+                "description": "Brewers of lovepotions and practitioners of mind-affectingalchemy.",
+                "features": [
+                    {
+                        "level": 3,
+                        "name": "Charmer",
+                        "description": "Proficiency inDeception and Persuasion; can use Intelligence for these checks. Can brewPhilter of Love for 1 Reagent."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Pheromone Bomb[Formula]",
+                        "description": "Bomb deals no damage but forces a Wisdom save or thetarget is Charmed."
+                    },
+                    {
+                        "level": 6,
+                        "name": "MagneticPersonality",
+                        "description": "Take the Influence action as a BonusAction."
+                    },
+                    {
+                        "level": 10,
+                        "name": "Beguiling Perfume",
+                        "description": "Enemieswithin 5ft must pass a Wisdom save to attack you or lose theattack."
+                    },
+                    {
+                        "level": 14,
+                        "name": "Alchemical Romance",
+                        "description": "Expend 1-4Reagents to improve Pheromone Bomb with effects: Dreamy Haze, Extended Charm,Ignore Immunity, or ToxicLove."
+                    }
+                ]
+            },
+            {
+                "name": "Apothecary",
+                "description": "Alchemical healers andherbalists.",
+                "features": [
+                    {
+                        "level": 3,
+                        "name": "Physician'sStudies",
+                        "description": "Proficiency in Medicine; add Intelligence modifier toMedicine checks."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Painkiller Bomb[Formula]",
+                        "description": "Bomb deals no damage but grants Temporary HP equal toAlchemist level. Can use Empowered Bomb to increase TempHP."
+                    },
+                    {
+                        "level": 6,
+                        "name": "Concentrated Healing",
+                        "description": "When a creaturedrinks your potion, replace up to half the dice with the highest possiblenumber."
+                    },
+                    {
+                        "level": 10,
+                        "name": "Self-Medication",
+                        "description": "Advantage onsaving throws until the end of your next turn after drinking a healingpotion."
+                    },
+                    {
+                        "level": 14,
+                        "name": "Alchemical Resurrection",
+                        "description": "Mixdiamond dust (1,000 GP) into a healing potion to create a Potion of Resurrection(Raise Dead effect)."
+                    }
+                ]
+            },
+            {
+                "name": "Dynamo Engineer",
+                "description": "Casts spellsby preparing them in devices known as SpellDynamos.",
+                "features": [
+                    {
+                        "level": 3,
+                        "name": "Spectrum Analyzer",
+                        "description": "CastDetect Magic once per Short/Long Rest without a slot."
+                    },
+                    {
+                        "level": 3,
+                        "name": "SpellDynamos",
+                        "description": "Cast Wizard spells using handheld devices. Uses aspecific spellcasting table for slots and preparedspells."
+                    },
+                    {
+                        "level": 6,
+                        "name": "Arcano Bomb [Formula]",
+                        "description": "Expend aSpell Dynamo to change Bomb to Force damage, use d12s, and add an extra die ofdamage."
+                    },
+                    {
+                        "level": 10,
+                        "name": "Counter-Discharge",
+                        "description": "Reaction: Expenda Spell Dynamo to gain Advantage and Resistance against a spell castwithin 60ft."
+                    },
+                    {
+                        "level": 14,
+                        "name": "Arcane Recycler",
+                        "description": "Reaction:Capture a spell targeting you into an expended Spell Dynamo."
+                    }
+                ]
+            },
+            {
+                "name": "MadBomber",
+                "description": "Pyromaniacs who fashion particularly devastatingBombs.",
+                "features": [
+                    {
+                        "level": 3,
+                        "name": "Blasting Specialty",
+                        "description": "Bombsdeal double damage to objects and structures."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Black PowderBomb [Formula]",
+                        "description": "Bomb uses d12s and bypasses Fire Resistance(Immunity becomes Resistance)."
+                    },
+                    {
+                        "level": 6,
+                        "name": "TimedDemolition",
+                        "description": "Set a duration (up to 10 mins) for a Bomb'sdetonation."
+                    },
+                    {
+                        "level": 10,
+                        "name": "Blast Shield",
+                        "description": "Gain Resistanceto one elemental damage type, changeable on a Short/LongRest."
+                    },
+                    {
+                        "level": 14,
+                        "name": "Overloaded Charge",
+                        "description": "When expendingreagents equal to PB to empower a bomb, gain 2 additional reagents for furtherempowerment."
+                    }
+                ]
+            },
+            {
+                "name": "Mutagenist",
+                "description": "Transmutes their body withexperimental, injected mutagens.",
+                "features": [
+                    {
+                        "level": 3,
+                        "name": "BonusProficiencies",
+                        "description": "Proficiency in Acrobatics orAthletics."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Mutagens",
+                        "description": "Bonus Action: Injectyourself for 1 minute to increase Strength, Dexterity, or Constitution scoreby 3 (max 23) and gain secondary benefits."
+                    },
+                    {
+                        "level": 6,
+                        "name": "SharedMutagen",
+                        "description": "Bonus Action: Expend 1 Reagent to inject an allywithin 5ft with a Mutagen."
+                    },
+                    {
+                        "level": 10,
+                        "name": "AdvancedMutation",
+                        "description": "Gain an additional mutation when using a Mutagen:Hyperelastic, Mucilaginous, or Polybrachia."
+                    },
+                    {
+                        "level": 14,
+                        "name": "MutatedBlood",
+                        "description": "Permanent +2 to Str, Dex, or Con (max 22). Max increasesto 25 when Mutagen is applied."
+                    }
+                ]
+            },
+            {
+                "name": "Ooze Rancher",
+                "description": "Breedsand commands all manner of Oozes andslimes.",
+                "features": [
+                    {
+                        "level": 3,
+                        "name": "Ooze Resilience",
+                        "description": "AcidResistance and Ooze Empathy (Oozes must save or miss attacks againstyou)."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Slime Bomb [Formula]",
+                        "description": "Bomb deals nodamage but coats targets in slime, preventing Bonus Actions and certainactions."
+                    },
+                    {
+                        "level": 6,
+                        "name": "Bottled Oozes",
+                        "description": "Spend 2 Reagents tocreate a Bottled Ooze (Gray Ooze). Higher levels allow Ochre Jelly, GelatinousCube, and Black Pudding."
+                    },
+                    {
+                        "level": 10,
+                        "name": "SacrificialSlime",
+                        "description": "Reaction: Command an allied ooze within 5ft to take anattack meant for you."
+                    },
+                    {
+                        "level": 14,
+                        "name": "ElementalOozes",
+                        "description": "Grant a Bottled Ooze immunity to an element; it heals fromthat damage type."
+                    }
+                ]
+            },
+            {
+                "name": "Venomsmith",
+                "description": "Poison expert andassassin.",
+                "features": [
+                    {
+                        "level": 3,
+                        "name": "Poisoner",
+                        "description": "Gain Alchemyof Poison discovery; ignore level 5 prerequisite."
+                    },
+                    {
+                        "level": 3,
+                        "name": "LaughingGas Bombs",
+                        "description": "Gain the formula (improved damage d10s andSide-Splitter effect)."
+                    },
+                    {
+                        "level": 6,
+                        "name": "AlchemicalAssassin",
+                        "description": "Bonus Action: Deal 1 piercing damage and apply poisonvia needle ring. Advantage on checks to conceal thering."
+                    },
+                    {
+                        "level": 10,
+                        "name": "Mithridatism",
+                        "description": "Immunity to Poisondamage and the Poisoned condition."
+                    },
+                    {
+                        "level": 14,
+                        "name": "ToxicRecompense",
+                        "description": "Reaction: Unleash poisonous vapor when hit by a meleeattack."
+                    }
+                ]
+            },
+            {
+                "name": "Xenoalchemist",
+                "description": "Modifies their body and thebodies of others with monstersurgery.",
+                "features": [
+                    {
+                        "level": 3,
+                        "name": "Xenobiology",
+                        "description": "Proficiencyin Arcana, Nature, or Medicine. Advantage to identifymonsters."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Mad Scientist",
+                        "description": "Gain two monstrousgrafts. Use Intelligence for graft-improved UnarmedStrikes."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Sleep Bomb [Formula]",
+                        "description": "Bomb deals nodamage but forces Wisdom saves against Incapacitated and Unconsciousconditions."
+                    },
+                    {
+                        "level": 6,
+                        "name": "Surgical Strike",
+                        "description": "Study action asa Bonus Action to learn target's AC, Immunities, Resistances, or Bloodiedstatus."
+                    },
+                    {
+                        "level": 10,
+                        "name": "Necromantic Organs",
+                        "description": "When reducedto 0 HP, drop to HP equal to Alchemist level instead. Once per LongRest."
+                    },
+                    {
+                        "level": 14,
+                        "name": "It's Alive!",
+                        "description": "Create an Alchemy Golemfrom 3 Humanoid corpses."
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,431 @@
+{
+    "class": {
+        "name": "Gunslinger",
+        "description": "Risk is in a Gunslinger’sblood. They are bold renegades, bucking tradition and forging a new path withdangerous and inelegant firearms. Gunslingers are infamous for surviving bytheir wits and relying on split-second timing and a considerable amount of luckto survive.",
+        "primary_abilities": [
+            "Dexterity"
+        ],
+        "hit_die": "d8",
+        "saving_throw_proficiencies": [
+            "Dexterity",
+            "Charisma"
+        ],
+        "skill_proficiencies": {
+            "choose": 2,
+            "options": [
+                "Acrobatics",
+                "AnimalHandling",
+                "Athletics",
+                "Deception",
+                "Insight",
+                "Intimidation",
+                "Perception",
+                "Persuasion",
+                "Sleight of Hand",
+                "Stealth"
+            ]
+        },
+        "weapon_proficiencies": [
+            "Simple weapons",
+            "Martial Ranged weapons"
+        ],
+        "armor_training": [
+            "Light armor"
+        ],
+        "starting_equipment": [
+            {
+                "option": "A",
+                "items": "Leather Armor, 2 Daggers,Revolver, 50 Bullets, Explorer’s Pack, and 11 GP"
+            },
+            {
+                "option": "B",
+                "items": "175 GP"
+            }
+        ],
+        "class_features": [
+            {
+                "level": 1,
+                "name": "Fighting Style",
+                "description": "You gain a Fighting Style feat of your choice. You can use featsthat require melee weapons with Ranged weapons instead. You can replace thisfeat whenever you gain a Gunslinger level."
+            },
+            {
+                "level": 1,
+                "name": "QuickDraw",
+                "description": "You have Advantage on Initiative rolls. You can draw orstow two weapons that lack the Two-Handed property when you would normally beable to draw or stow only one."
+            },
+            {
+                "level": 1,
+                "name": "Weapon Mastery",
+                "description": "You can use the mastery properties of two kinds of Simple orMartial Ranged weapons of your choice. You can change one choice whenever youfinish a Long Rest."
+            },
+            {
+                "level": 2,
+                "name": "Critical Shot",
+                "description": "Your attack rolls with Ranged weapons score a Critical Hit on a roll of 19or 20. This range improves to 18–20 at level 9 and 17–20 at level 17."
+            },
+            {
+                "level": 2,
+                "name": "Risk",
+                "description": "You gain four d8 Risk Dice. Youregain all expended Risk Dice when you finish a Short or Long Rest. ManeuverSave DC = 8 + Dexterity modifier + Proficiency Bonus."
+            },
+            {
+                "level": 3,
+                "name": "Gunslinger Subclass",
+                "description": "You gain a Gunslinger subclass of yourchoice, granting features at levels 3, 6, 10, and 14."
+            },
+            {
+                "level": 4,
+                "name": "Ability Score Improvement",
+                "description": "You gain the Ability ScoreImprovement feat or another feat for which you qualify. You gain this featureagain at levels 8, 12, and 16."
+            },
+            {
+                "level": 5,
+                "name": "Extra Attack",
+                "description": "You can attack twice instead of once whenever you take theAttack action on your turn."
+            },
+            {
+                "level": 5,
+                "name": "Gut Shot",
+                "description": "On a Critical Hit against a Large or smaller creature with a ranged weapon, theprojectile lodges in the target. For 1 minute or until dislodged, its Speed ishalved and it has Disadvantage on attack rolls."
+            },
+            {
+                "level": 7,
+                "name": "Evasion",
+                "description": "When you make a Dexterity saving throw to take onlyhalf damage, you instead take no damage if you succeed and only half damage ifyou fail. Does not function while Incapacitated."
+            },
+            {
+                "level": 11,
+                "name": "Overkill",
+                "description": "You add your ability modifier to damage rolls withRanged weapons that don't normally add it (like Firearms). If you already addit, the target takes an extra 1d8 damage of the weapon's type."
+            },
+            {
+                "level": 13,
+                "name": "Cheat Death",
+                "description": "When reduced to 0 HP but notkilled outright, you can drop to 1 HP instead and regain HP equal to yourGunslinger level. Once per Short or Long Rest."
+            },
+            {
+                "level": 15,
+                "name": "DireGambit",
+                "description": "Whenever you roll Initiative or score a Critical Hit,you regain one expended Risk Die."
+            },
+            {
+                "level": 18,
+                "name": "Deft Maneuver",
+                "description": "You gain an additional Bonus Action on each of your turns thatcan only be used to perform a maneuver."
+            },
+            {
+                "level": 19,
+                "name": "Epic Boon",
+                "description": "You gain an Epic Boon feat or another feat of your choice forwhich you qualify."
+            },
+            {
+                "level": 20,
+                "name": "Headshot",
+                "description": "On aCritical Hit with a Ranged weapon, if the target has less than 100 HP, it dies.Otherwise, it takes an extra 10d10 damage. Once per Short or Long Rest, or byexpending three Risk Dice."
+            }
+        ],
+        "maneuvers": [
+            {
+                "name": "Bite the Bullet",
+                "description": "Bonus Action: Expend 1 Risk Die to gain Temporary Hit Pointsequal to the roll + your Gunslinger level."
+            },
+            {
+                "name": "Blindfire",
+                "description": "Bonus Action: Expend 1 Risk Die to gain Blindsight (30 feet)until the end of the current turn."
+            },
+            {
+                "name": "Dodge Roll",
+                "description": "Bonus Action: Expend 1 Risk Die to move up to 15 feet (no OA) and reload anyRanged weapon you are holding."
+            },
+            {
+                "name": "Grazing Shot",
+                "description": "OnMiss: Expend 1 Risk Die (no action) to deal damage equal to the roll + Dexteritymodifier. Once per turn."
+            },
+            {
+                "name": "Maverick Spirit",
+                "description": "OnFailed Int/Wis/Cha check or save: Expend 1 Risk Die to add it to the roll. Onceper turn."
+            },
+            {
+                "name": "Skin of Your Teeth",
+                "description": "Reaction (whenhit): Expend 1 Risk Die to add the roll to your AC against that attack."
+            }
+        ],
+        "subclasses": [
+            {
+                "name": "Deadeye",
+                "features": [
+                    {
+                        "level": 3,
+                        "name": "EagleEye [Maneuver]",
+                        "description": "Once per turn when you miss a ranged attack,expend 1 Risk Die to add it to the attack roll."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Sharpshooter’S Stance",
+                        "description": "You don't have Disadvantage on rangedattacks for being Prone. You can stand up from Prone using only 5 feet ofmovement."
+                    },
+                    {
+                        "level": 6,
+                        "name": "Concealed Position",
+                        "description": "Youcan Hide while Prone even without cover. If you miss an attack while hidden,your location is not revealed."
+                    },
+                    {
+                        "level": 10,
+                        "name": "Reposition",
+                        "description": "Reaction: When a creature misses you with an attack, you can endthe Prone condition and move up to half your Speed."
+                    },
+                    {
+                        "level": 14,
+                        "name": "Focused Shot",
+                        "description": "When you take the Attack action, you can makeonly one ranged attack with Advantage; on a hit, it is a Critical Hit."
+                    }
+                ]
+            },
+            {
+                "name": "Gun Tank",
+                "features": [
+                    {
+                        "level": 3,
+                        "name": "Heavy Gunner",
+                        "description": "Gain training with Medium and Heavy armor. Use Strength forRanged attack/damage rolls and Maneuver save DC."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Walking Turret",
+                        "description": "You can use the Mounted mastery property.Moving with a mounted weapon costs 1 extra foot per foot moved."
+                    },
+                    {
+                        "level": 6,
+                        "name": "Thick-Skulled",
+                        "description": "Advantage on saving throwsagainst the Charmed, Frightened, and Stunned conditions."
+                    },
+                    {
+                        "level": 10,
+                        "name": "Bulletproof",
+                        "description": "Using Bite the Bullet grants Resistanceto Bludgeoning, Piercing, and Slashing damage until the end of your next turn."
+                    },
+                    {
+                        "level": 14,
+                        "name": "Gatling Shot",
+                        "description": "Once per turn on hit,make another attack with Disadvantage. Repeat until you miss or reach 5 totalattacks."
+                    }
+                ]
+            },
+            {
+                "name": "Gun-Ko Master",
+                "features": [
+                    {
+                        "level": 3,
+                        "name": "Close-Quarters Shooting",
+                        "description": "Being within 5 feet of an enemydoesn't impose Disadvantage on Ranged attack rolls."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Gun-Ko",
+                        "description": "You can replace a weapon's mastery property withBludgeon. After a ranged attack within 5ft, make a melee bludgeon attack as aBonus Action."
+                    },
+                    {
+                        "level": 6,
+                        "name": "Lightning Disarm [Maneuver]",
+                        "description": "Bonus Action: Expend 1 Risk Die to attempt to disarm a creaturewithin 5 feet. Target makes a Dexterity save."
+                    },
+                    {
+                        "level": 6,
+                        "name": "WallDash [Maneuver]",
+                        "description": "Bonus Action: Expend 1 Risk Die to Dash, gaina Climb Speed, and move across vertical surfaces hands-free."
+                    },
+                    {
+                        "level": 10,
+                        "name": "Predictive Dodge",
+                        "description": "Bonus Action: Choose a creaturewithin 30ft; gain Dodge benefits against its ranged attacks and Dexterity savesuntil your next turn."
+                    },
+                    {
+                        "level": 14,
+                        "name": "Flash Assault",
+                        "description": "Bonus Action: Make one ranged attack and one melee bludgeon attack. If both hita Large or smaller creature, it is Prone. Once per Short/Long Rest or spend 2Risk Dice."
+                    }
+                ]
+            },
+            {
+                "name": "High Roller",
+                "features": [
+                    {
+                        "level": 3,
+                        "name": "Poker Face",
+                        "description": "Gain proficiency with Gaming Sets and one skill:Deception, Insight, or Perception."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Liar’S Dice[Maneuver]",
+                        "description": "Bonus Action: Expend 1 Risk Die to hide a damageroll and declare a total. If the GM calls your bluff and you lied, damage ishalved; if you told the truth, it is doubled."
+                    },
+                    {
+                        "level": 6,
+                        "name": "RiskyBusiness",
+                        "description": "Once per turn, take Disadvantage on an attack roll toregain one expended Risk Die."
+                    },
+                    {
+                        "level": 10,
+                        "name": "Risk Taker",
+                        "description": "Use Maverick Spirit and Skin of Your Teeth without expendingRisk Dice; roll a d6 instead."
+                    },
+                    {
+                        "level": 14,
+                        "name": "Double Or Nothing",
+                        "description": "On a Critical Hit, roll a d20. On 10+, deal 4x damage dice; on 9or lower, it becomes a normal hit."
+                    }
+                ]
+            },
+            {
+                "name": "Musketeer",
+                "features": [
+                    {
+                        "level": 3,
+                        "name": "Infantry Training",
+                        "description": "Gain proficiency withall Martial weapons and Melee Mastery. Ignore Loading on specific guns. Gainproficiency with Bayonets (1d8 Piercing, Finesse, Slow)."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Skirmish [Maneuver]",
+                        "description": "Bonus Action: Expend 1 Risk Dieto make an extra attack. One must be melee and the other ranged."
+                    },
+                    {
+                        "level": 6,
+                        "name": "Morale Boost",
+                        "description": "Bite the Bullet grantsTemporary HP to up to 5 allies within 30 feet."
+                    },
+                    {
+                        "level": 10,
+                        "name": "Mobile Tactics",
+                        "description": "When you hit a creature, it cannot makeOpportunity Attacks against you until the start of its next turn."
+                    },
+                    {
+                        "level": 14,
+                        "name": "All For One",
+                        "description": "Reaction: When an allywithin 10 feet is hit, make a ranged weapon attack against the attacker."
+                    }
+                ]
+            },
+            {
+                "name": "Pistolero",
+                "features": [
+                    {
+                        "level": 3,
+                        "name": "Close-QuartersShooting",
+                        "description": "Being within 5 feet of an enemy doesn't imposeDisadvantage on Ranged attack rolls."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Fan The Hammer[Maneuver]",
+                        "description": "Bonus Action: Expend 1 Risk Die to make twoadditional ranged attacks with Disadvantage using a non-Two-Handed weapon."
+                    },
+                    {
+                        "level": 6,
+                        "name": "Disarm",
+                        "description": "On a Critical Hit triggering GutShot, you can disarm the target instead of lodging the projectile."
+                    },
+                    {
+                        "level": 10,
+                        "name": "Showdown [Maneuver]",
+                        "description": "On Initiative:Expend 1 Risk Die to draw and attack. Add die to damage. Target has Disadvantageon attacks against others."
+                    },
+                    {
+                        "level": 14,
+                        "name": "Bullet Time",
+                        "description": "Once on each of your turns, you can gain Advantage on a rangedweapon attack roll."
+                    }
+                ]
+            },
+            {
+                "name": "Spellslinger",
+                "features": [
+                    {
+                        "level": 3,
+                        "name": "Spellcasting",
+                        "description": "You gain spellcasting usingthe Wizard list and Intelligence. You can use a Ranged weapon as a spellcastingfocus."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Bang, You’Re Dead!",
+                        "description": "LearnFinger Guns cantrip. Arcane Shot: Expend 1 Risk Die to add it to Finger Gunsdamage."
+                    },
+                    {
+                        "level": 6,
+                        "name": "Spellshot",
+                        "description": "When you take theAttack action, replace one attack with a Wizard cantrip (1 action castingtime)."
+                    },
+                    {
+                        "level": 10,
+                        "name": "Counter-Mage",
+                        "description": "Abjuration-Breaker suppresses magic on hit. Antimagic Shot preventsspellcasting on Gut Shot. Inured to Magic adds 1d6 to failed saves vs magic."
+                    },
+                    {
+                        "level": 14,
+                        "name": "Magic Bullet [Maneuver]",
+                        "description": "Bonus Action:Expend 1 Risk Die to substitute a spell attack with a ranged weapon attack,adding the die to the roll."
+                    }
+                ]
+            },
+            {
+                "name": "Trick Shot",
+                "features": [
+                    {
+                        "level": 3,
+                        "name": "Creative Trajectory",
+                        "description": "Your ranged weaponattacks ignore Half Cover and Three-Quarters Cover."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Ricochet [Maneuver]",
+                        "description": "Bonus Action: Expend 1 Risk Die on a missto reroll the attack and add the die to the new roll."
+                    },
+                    {
+                        "level": 6,
+                        "name": "Fancy Gunplay",
+                        "description": "Add a Risk Die to Performance/Sleight of Handchecks without expending it. Reload weapons without an action."
+                    },
+                    {
+                        "level": 10,
+                        "name": "Deft Deflection [Maneuver]",
+                        "description": "Reaction:Expend 1 Risk Die to grant an ally within 30ft the benefit of Skin of YourTeeth."
+                    },
+                    {
+                        "level": 14,
+                        "name": "Pinball Shot",
+                        "description": "On hit,deflect projectile to hit up to 5 additional targets within 30ft. Once perShort/Long Rest or spend 2 Risk Dice."
+                    }
+                ]
+            },
+            {
+                "name": "White Hat",
+                "features": [
+                    {
+                        "level": 3,
+                        "name": "Lay Down The Law [Maneuver]",
+                        "description": "BonusAction: Expend 1 Risk Die to grant an ally Temp HP. If they are hit, use aReaction to attack the attacker."
+                    },
+                    {
+                        "level": 3,
+                        "name": "Steely-Eyed Aura",
+                        "description": "10ft aura granting Advantage on saves against the Frightenedcondition."
+                    },
+                    {
+                        "level": 6,
+                        "name": "Reach For The Skies",
+                        "description": "OnCritical Hit, force a Wisdom save or the target is Frightened and Incapacitatedfor 1 minute."
+                    },
+                    {
+                        "level": 10,
+                        "name": "Long Arm Of The Law",
+                        "description": "Once per turn on hit, a Large or smaller creature cannot move on its next turnunless it Disengages."
+                    },
+                    {
+                        "level": 14,
+                        "name": "Gold Star Hero",
+                        "description": "Aura increases to 30ft. Lay Down the Law grants Resistance.Reach for the Skies causes Stunned instead of Incapacitated."
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -25,21 +25,20 @@ jobs:
         uses: subosito/flutter-action@v2
         with:
           channel: 'stable'
-          cache: true # Caches the Flutter SDK to speed up runner execution
+          cache: true
 
       - name: Install Dart Dependencies
         run: flutter pub get
 
-      # Critical: Isar and Riverpod require the generated .g.dart files. 
-      # Since these shouldn't be committed to source control, they must be generated in the pipeline.
-      - name: Run Code Generation
-        run: dart run build_runner build --delete-conflicting-outputs
-
-      # Enforces strict Dart formatting
+      # 1. Enforce strict Dart formatting on handwritten code FIRST
       - name: Verify Formatting
         run: dart format --output=none --set-exit-if-changed .
 
-      # Fails the build on any linting regressions, enforcing type safety
+      # 2. Generate Isar/Riverpod .g.dart files SECOND (ignoring generator format output)
+      - name: Run Code Generation
+        run: dart run build_runner build --delete-conflicting-outputs
+
+      # 3. Fail the build on linting regressions LAST (assuming analysis_options.yaml ignores .g.dart)
       - name: Analyze Code
         run: flutter analyze --fatal-infos --fatal-warnings
 

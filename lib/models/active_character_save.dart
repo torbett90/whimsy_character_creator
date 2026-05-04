@@ -13,13 +13,13 @@ class ActiveCharacterSave {
   int temporaryHp = 0;
 
   // Pointers to the Rulebook Collections
-  String? className;      
-  String? subclass;       
-  String? speciesName;    
-  String? backgroundName; 
+  String? className;
+  String? subclass;
+  String? speciesName;
+  String? backgroundName;
 
   // Mutable State Lists
   List<String> inventory = [];
   List<String> selectedSpells = [];
-  List<String> selectedFeatures = []; 
+  List<String> selectedFeatures = [];
 }

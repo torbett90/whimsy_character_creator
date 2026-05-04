@@ -5,10 +5,10 @@ part 'species.g.dart';
 @collection
 class Species {
   Id? id;
-  
+
   @Index(unique: true, replace: true)
   late String name;
-  
+
   late String description;
   late int speed;
   late String size;
@@ -20,9 +20,11 @@ class Species {
       ..description = json['description'] as String? ?? ''
       ..speed = json['speed'] as int? ?? 30
       ..size = json['size'] as String? ?? 'Medium'
-      ..traits = (json['traits'] as List<dynamic>?)
+      ..traits =
+          (json['traits'] as List<dynamic>?)
               ?.map((e) => SpeciesTrait.fromJson(e as Map<String, dynamic>))
-              .toList() ?? [];
+              .toList() ??
+          [];
   }
 }
 

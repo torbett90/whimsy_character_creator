@@ -9,7 +9,7 @@ class DndClass {
 
   @Index(unique: true, replace: true)
   late String name;
-  
+
   late String description;
   late String hitDie;
   late List<String> primaryAbilities;
@@ -20,16 +20,19 @@ class DndClass {
   late List<ClassFeature> classFeatures;
   late List<SubclassData> subclasses;
   List<ClassSpecificFeature>? tricks;
-  
+
   // Stored as JSON string in Isar due to map limitations
   late String progressionTableJson;
 
   // Manual deserialization for Riverpod to use later
-  @ignore 
+  @ignore
   Map<int, ProgressionStats> get progressionTable {
     if (progressionTableJson.isEmpty) return {};
     final map = jsonDecode(progressionTableJson) as Map<String, dynamic>;
-    return map.map((key, value) => MapEntry(int.parse(key), ProgressionStats.fromJson(value)));
+    return map.map(
+      (key, value) =>
+          MapEntry(int.parse(key), ProgressionStats.fromJson(value)),
+    );
   }
 
   static DndClass fromJson(Map<String, dynamic> json) {
@@ -37,27 +40,50 @@ class DndClass {
       ..name = json['name'] as String? ?? ''
       ..description = json['description'] as String? ?? ''
       ..hitDie = json['hit_die'] ?? json['hitDie'] ?? 'd8'
-      ..primaryAbilities = List<String>.from(json['primary_abilities'] ?? json['primaryAbilities'] ?? [])
-      ..savingThrowProficiencies = List<String>.from(json['saving_throw_proficiencies'] ?? json['savingThrowProficiencies'] ?? [])
-      ..weaponProficiencies = List<String>.from(json['weapon_proficiencies'] ?? json['weaponProficiencies'] ?? [])
-      ..armorTraining = List<String>.from(json['armor_training'] ?? json['armorTraining'] ?? [])
-      ..skillProficiencies = ProficiencyChoice.fromJson(json['skill_proficiencies'] ?? json['skillProficiencies'] ?? <String, dynamic>{})
-      
+      ..primaryAbilities = List<String>.from(
+        json['primary_abilities'] ?? json['primaryAbilities'] ?? [],
+      )
+      ..savingThrowProficiencies = List<String>.from(
+        json['saving_throw_proficiencies'] ??
+            json['savingThrowProficiencies'] ??
+            [],
+      )
+      ..weaponProficiencies = List<String>.from(
+        json['weapon_proficiencies'] ?? json['weaponProficiencies'] ?? [],
+      )
+      ..armorTraining = List<String>.from(
+        json['armor_training'] ?? json['armorTraining'] ?? [],
+      )
+      ..skillProficiencies = ProficiencyChoice.fromJson(
+        json['skill_proficiencies'] ??
+            json['skillProficiencies'] ??
+            <String, dynamic>{},
+      )
       // Strictly typed lists to prevent Isar List<dynamic> crashes
-      ..classFeatures = ((json['class_features'] ?? json['classFeatures']) as List<dynamic>?)
-          ?.map<ClassFeature>((e) => ClassFeature.fromJson(e as Map<String, dynamic>))
-          .toList() ?? []
-      ..subclasses = (json['subclasses'] as List<dynamic>?)
-          ?.map<SubclassData>((e) => SubclassData.fromJson(e as Map<String, dynamic>))
-          .toList() ?? []
+      ..classFeatures =
+          ((json['class_features'] ?? json['classFeatures']) as List<dynamic>?)
+              ?.map<ClassFeature>(
+                (e) => ClassFeature.fromJson(e as Map<String, dynamic>),
+              )
+              .toList() ??
+          []
+      ..subclasses =
+          (json['subclasses'] as List<dynamic>?)
+              ?.map<SubclassData>(
+                (e) => SubclassData.fromJson(e as Map<String, dynamic>),
+              )
+              .toList() ??
+          []
       ..tricks = (json['tricks'] as List<dynamic>?)
-          ?.map<ClassSpecificFeature>((e) => ClassSpecificFeature.fromJson(e as Map<String, dynamic>))
+          ?.map<ClassSpecificFeature>(
+            (e) => ClassSpecificFeature.fromJson(e as Map<String, dynamic>),
+          )
           .toList();
 
     // Handle Progression Table stringification
     final progMap = json['progression_table'] ?? json['progressionTable'] ?? {};
     clazz.progressionTableJson = jsonEncode(progMap);
-    
+
     return clazz;
   }
 }
@@ -71,9 +97,11 @@ class ProgressionStats {
 
   static ProgressionStats fromJson(Map<String, dynamic> json) {
     return ProgressionStats()
-      ..proficiencyBonus = json['proficiency_bonus'] ?? json['proficiencyBonus'] ?? 2
+      ..proficiencyBonus =
+          json['proficiency_bonus'] ?? json['proficiencyBonus'] ?? 2
       ..cantripsKnown = json['cantrips_known'] ?? json['cantripsKnown'] ?? 0
-      ..cantripBonusDice = json['cantrip_bonus_dice'] ?? json['cantripBonusDice'] ?? '0'
+      ..cantripBonusDice =
+          json['cantrip_bonus_dice'] ?? json['cantripBonusDice'] ?? '0'
       ..tricksKnown = json['tricks_known'] ?? json['tricksKnown'] ?? 0;
   }
 }
@@ -112,11 +140,14 @@ class SubclassData {
   static SubclassData fromJson(Map<String, dynamic> json) {
     return SubclassData()
       ..name = json['name'] as String? ?? ''
-      
       // Strictly typed list
-      ..features = (json['features'] as List<dynamic>?)
-          ?.map<ClassFeature>((e) => ClassFeature.fromJson(e as Map<String, dynamic>))
-          .toList() ?? [];
+      ..features =
+          (json['features'] as List<dynamic>?)
+              ?.map<ClassFeature>(
+                (e) => ClassFeature.fromJson(e as Map<String, dynamic>),
+              )
+              .toList() ??
+          [];
   }
 }
 

@@ -10,7 +10,7 @@ class Feat {
   late String name;
 
   @Index() // Allows Riverpod to easily query feats by type
-  late String category; 
+  late String category;
 
   late String description;
   late String prerequisite;
@@ -23,10 +23,14 @@ class Feat {
       ..category = json['category'] as String? ?? 'General'
       ..description = json['description'] as String? ?? ''
       ..prerequisite = json['prerequisite'] as String? ?? 'None'
-      ..asiOptions = List<String>.from(json['asi_options'] ?? json['asiOptions'] ?? [])
-      ..benefits = (json['benefits'] as List<dynamic>?)
+      ..asiOptions = List<String>.from(
+        json['asi_options'] ?? json['asiOptions'] ?? [],
+      )
+      ..benefits =
+          (json['benefits'] as List<dynamic>?)
               ?.map((e) => FeatBenefit.fromJson(e as Map<String, dynamic>))
-              .toList() ?? [];
+              .toList() ??
+          [];
   }
 }
 

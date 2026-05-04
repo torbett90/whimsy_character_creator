@@ -6,16 +6,13 @@ import 'models/dnd_class.dart';
 import 'models/species.dart';
 import 'models/background.dart';
 import 'models/feat.dart';
-import 'models/active_character_save.dart';
+import 'dart:developer';
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await DatabaseInitializer.initialize();
 
-  runApp(
-    const ProviderScope(
-      child: MyApp(),
-    ),
-  );
+  runApp(const ProviderScope(child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -35,20 +32,20 @@ class MyApp extends StatelessWidget {
           child: ElevatedButton(
             onPressed: () async {
               final isar = DatabaseInitializer.isar;
-              
+
               // Query the first entry of each collection
               final warmage = await isar.dndClass.where().findFirst();
               final species = await isar.species.where().findFirst();
               final background = await isar.backgrounds.where().findFirst();
               final feat = await isar.feats.where().findFirst();
 
-              // Print to the debug console in Android Studio
-              print('\n--- PHASE 1 VALIDATION RESULTS ---');
-              print('Class Seeded: ${warmage?.name ?? "FAILED"}');
-              print('Species Seeded: ${species?.name ?? "FAILED"}');
-              print('Background Seeded: ${background?.name ?? "FAILED"}');
-              print('Feat Seeded: ${feat?.name ?? "FAILED"}');
-              print('----------------------------------\n');
+              // log to the debug console in Android Studio
+              log('\n--- PHASE 1 VALIDATION RESULTS ---');
+              log('Class Seeded: ${warmage?.name ?? "FAILED"}');
+              log('Species Seeded: ${species?.name ?? "FAILED"}');
+              log('Background Seeded: ${background?.name ?? "FAILED"}');
+              log('Feat Seeded: ${feat?.name ?? "FAILED"}');
+              log('----------------------------------\n');
             },
             child: const Text('Run Database Query'),
           ),

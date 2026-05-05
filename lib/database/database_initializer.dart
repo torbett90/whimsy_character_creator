@@ -24,13 +24,16 @@ class DatabaseInitializer {
     }
 
     // Open Isar with all five schemas required for the MVP
-    isar = await Isar.open([
-      DndClassSchema,
-      SpeciesSchema,
-      BackgroundSchema,
-      FeatSchema,
-      ActiveCharacterSaveSchema,
-    ], directory: dbPath ?? ''); // Web uses IndexedDB and ignores this, but it cannot be null
+    isar = await Isar.open(
+      [
+        DndClassSchema,
+        SpeciesSchema,
+        BackgroundSchema,
+        FeatSchema,
+        ActiveCharacterSaveSchema,
+      ],
+      directory: dbPath ?? '',
+    ); // Web uses IndexedDB and ignores this, but it cannot be null
 
     // Guard clause: If the static rulebook data already exists, skip the seeding process
     if (await isar.dndClass.count() > 0) return;

@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/services.dart';
 import 'package:isar/isar.dart';
 import 'package:path_provider/path_provider.dart';
@@ -14,7 +15,13 @@ class DatabaseInitializer {
   static late Isar isar;
 
   static Future<void> initialize() async {
-    final dir = await getApplicationDocumentsDirectory();
+    String? dbPath;
+
+    // Conditionally bypass native file system on web targets
+    if (!kIsWeb) {
+      final dir = await getApplicationDocumentsDirectory();
+      dbPath = dir.path;
+    }
 
     // Open Isar with all five schemas required for the MVP
     isar = await Isar.open([
@@ -23,7 +30,7 @@ class DatabaseInitializer {
       BackgroundSchema,
       FeatSchema,
       ActiveCharacterSaveSchema,
-    ], directory: dir.path);
+    ], directory: dbPath ?? ''); // Web uses IndexedDB and ignores this, but it cannot be null
 
     // Guard clause: If the static rulebook data already exists, skip the seeding process
     if (await isar.dndClass.count() > 0) return;

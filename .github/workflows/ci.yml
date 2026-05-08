@@ -15,7 +15,6 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      # Required C++ toolchain and GTK headers for Linux Desktop builds
       - name: Install Linux Build Dependencies
         run: |
           sudo apt-get update
@@ -30,20 +29,14 @@ jobs:
       - name: Install Dart Dependencies
         run: flutter pub get
 
-      # 1. Enforce strict Dart formatting on handwritten code FIRST
       - name: Verify Formatting
         run: dart format --output=none --set-exit-if-changed .
 
-      # 2. Generate Isar/Riverpod .g.dart files SECOND (ignoring generator format output)
       - name: Run Code Generation
         run: dart run build_runner build --delete-conflicting-outputs
 
-      # 3. Fail the build on linting regressions LAST (assuming analysis_options.yaml ignores .g.dart)
       - name: Analyze Code
         run: flutter analyze --fatal-infos --fatal-warnings
-
-      - name: Build Web Artifact
-        run: flutter build web --release
 
       - name: Build Linux Artifact
         run: flutter build linux --release

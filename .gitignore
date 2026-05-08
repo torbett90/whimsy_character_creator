@@ -51,3 +51,6 @@ app.*.map.json
 # (Optional but recommended) 
 # We DO want to commit the generated *.g.dart files so your CI/CD pipeline 
 # doesn't have to waste time running build_runner on every push.
+# Code Generation
+*.g.dart
+*.freezed.dart

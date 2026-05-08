@@ -6,6 +6,10 @@ on:
   pull_request:
     branches: [ "master" ]
 
+# CRITICAL: Grant the runner permission to push commits back to the repository
+permissions:
+  contents: write
+
 jobs:
   validate-and-build:
     name: Flutter Analyze & Build
@@ -29,12 +33,21 @@ jobs:
       - name: Install Dart Dependencies
         run: flutter pub get
 
-      - name: Verify Formatting
-        run: dart format --output=none --set-exit-if-changed .
+      # 1. Format all code natively (No exit flag, so it just modifies the files in the runner)
+      - name: Auto-Format Code
+        run: dart format .
 
+      # 2. Automatically commit the modified files back to the repository
+      - name: Commit Formatting Fixes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "style: automated pipeline code formatting"
+
+      # 3. Generate Isar/Riverpod files
       - name: Run Code Generation
         run: dart run build_runner build --delete-conflicting-outputs
 
+      # 4. Fail the build ONLY on actual code quality/linting regressions
       - name: Analyze Code
         run: flutter analyze --fatal-infos --fatal-warnings
 

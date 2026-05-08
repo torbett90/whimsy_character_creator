@@ -40,9 +40,18 @@ class ActiveCharacter extends _$ActiveCharacter {
     // 2. Concurrently fetch the static rulebook pointers
     // Assuming ActiveCharacterSave has String fields like 'className', 'speciesName'
     final futures = await Future.wait([
-      save.className != null ? isar.dndClass.filter().nameEqualTo(save.className!).findFirst() : Future.value(null),
-      save.speciesName != null ? isar.species.filter().nameEqualTo(save.speciesName!).findFirst() : Future.value(null),
-      save.backgroundName != null ? isar.backgrounds.filter().nameEqualTo(save.backgroundName!).findFirst() : Future.value(null),
+      save.className != null
+          ? isar.dndClass.filter().nameEqualTo(save.className!).findFirst()
+          : Future.value(null),
+      save.speciesName != null
+          ? isar.species.filter().nameEqualTo(save.speciesName!).findFirst()
+          : Future.value(null),
+      save.backgroundName != null
+          ? isar.backgrounds
+                .filter()
+                .nameEqualTo(save.backgroundName!)
+                .findFirst()
+          : Future.value(null),
     ]);
 
     return CharacterSheetState(
@@ -60,9 +69,12 @@ class ActiveCharacter extends _$ActiveCharacter {
 
     // Isar models are mutable, but we treat them as immutable in the UI layer.
     final updatedSave = currentState.save;
-    
+
     // Assume you have currentHp and maxHp in your ActiveCharacterSave schema
-    updatedSave.currentHp = (updatedSave.currentHp - amount).clamp(0, updatedSave.maxHp);
+    updatedSave.currentHp = (updatedSave.currentHp - amount).clamp(
+      0,
+      updatedSave.maxHp,
+    );
 
     // 1. Persist to local NoSQL
     final isar = DatabaseInitializer.isar;

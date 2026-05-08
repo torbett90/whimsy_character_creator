@@ -10,7 +10,7 @@ class ActiveCharacterSave {
   late String characterName;
   int level = 1;
   int currentHp = 0;
-  int maxHp = 0; 
+  int maxHp = 0;
   int temporaryHp = 0;
 
   // Pointers to the Rulebook Collections

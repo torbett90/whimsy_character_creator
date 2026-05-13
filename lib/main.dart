@@ -9,7 +9,7 @@ import 'state/active_character_notifier.dart'; // Ensure this matches your path
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await DatabaseInitializer.initialize();
-  
+
   // Inject a dummy save for Phase 2 UI testing if one doesn't exist
   await _bootstrapDummyCharacter();
 
@@ -25,7 +25,8 @@ Future<void> _bootstrapDummyCharacter() async {
       ..level = 1
       ..maxHp = 10
       ..currentHp = 10
-      ..className = "Warmage" // Must match the exact string in your JSON
+      ..className =
+          "Warmage" // Must match the exact string in your JSON
       ..speciesName = "Plushie";
 
     await isar.writeTxn(() async {
@@ -72,21 +73,24 @@ class CharacterDashboard extends ConsumerWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  state.save.characterName, 
-                  style: const TextStyle(fontSize: 28, fontWeight: FontWeight.bold)
+                  state.save.characterName,
+                  style: const TextStyle(
+                    fontSize: 28,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
                 // Display the data merged from the static rulebook
                 Text('Class: ${state.characterClass?.name ?? "Unknown"}'),
                 Text('Species: ${state.species?.name ?? "Unknown"}'),
                 const SizedBox(height: 30),
-                
+
                 // Display Mutable State
                 Text(
                   'HP: ${state.save.currentHp} / ${state.save.maxHp}',
                   style: const TextStyle(fontSize: 48, color: Colors.red),
                 ),
                 const SizedBox(height: 20),
-                
+
                 // Trigger the mutation
                 ElevatedButton.icon(
                   onPressed: () {

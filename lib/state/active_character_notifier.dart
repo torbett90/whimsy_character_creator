@@ -61,6 +61,7 @@ class ActiveCharacter extends _$ActiveCharacter {
     if (currentState == null) return;
 
     final updatedSave = currentState.save;
+
     updatedSave.currentHp = (updatedSave.currentHp - amount).clamp(
       0,
       updatedSave.maxHp,

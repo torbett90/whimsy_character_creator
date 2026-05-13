@@ -51,5 +51,10 @@ jobs:
       - name: Analyze Code
         run: flutter analyze --fatal-infos --fatal-warnings
 
+      # 5. Execute Pure Logic and DB tests
+      - name: Run Unit Tests
+        run: flutter test
+
+      # 6. Compile release binary only if all quality gates pass
       - name: Build Linux Artifact
         run: flutter build linux --release

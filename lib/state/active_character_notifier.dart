@@ -7,12 +7,11 @@ import '../models/active_character_save.dart';
 import '../models/dnd_class.dart';
 import '../models/species.dart';
 import '../models/background.dart';
+import '../utils/dnd_math.dart';
 
 part 'active_character_notifier.freezed.dart';
 part 'active_character_notifier.g.dart';
 
-/// The hydrated, read-only state passed to the UI.
-/// It combines the mutable save data with the static rulebook definitions.
 @freezed
 class CharacterSheetState with _$CharacterSheetState {
   const factory CharacterSheetState({
@@ -23,26 +22,30 @@ class CharacterSheetState with _$CharacterSheetState {
   }) = _CharacterSheetState;
 }
 
-/// The Riverpod Notifier that controls the character state.
-/// We pass [characterId] into the build method to allow managing multiple characters.
 @riverpod
 class ActiveCharacter extends _$ActiveCharacter {
   @override
   Future<CharacterSheetState> build(int characterId) async {
     final isar = DatabaseInitializer.isar;
 
-    // 1. Load the active save
     final save = await isar.activeCharacterSaves.get(characterId);
     if (save == null) {
       throw Exception('Character save ID $characterId not found in Isar.');
     }
 
-    // 2. Concurrently fetch the static rulebook pointers
-    // Assuming ActiveCharacterSave has String fields like 'className', 'speciesName'
     final futures = await Future.wait([
-      save.className != null ? isar.dndClass.filter().nameEqualTo(save.className!).findFirst() : Future.value(null),
-      save.speciesName != null ? isar.species.filter().nameEqualTo(save.speciesName!).findFirst() : Future.value(null),
-      save.backgroundName != null ? isar.backgrounds.filter().nameEqualTo(save.backgroundName!).findFirst() : Future.value(null),
+      save.className != null
+          ? isar.dndClass.filter().nameEqualTo(save.className!).findFirst()
+          : Future.value(null),
+      save.speciesName != null
+          ? isar.species.filter().nameEqualTo(save.speciesName!).findFirst()
+          : Future.value(null),
+      save.backgroundName != null
+          ? isar.backgrounds
+                .filter()
+                .nameEqualTo(save.backgroundName!)
+                .findFirst()
+          : Future.value(null),
     ]);
 
     return CharacterSheetState(
@@ -53,24 +56,50 @@ class ActiveCharacter extends _$ActiveCharacter {
     );
   }
 
-  /// Example Mutation: Taking Damage
   Future<void> takeDamage(int amount) async {
     final currentState = state.valueOrNull;
     if (currentState == null) return;
 
-    // Isar models are mutable, but we treat them as immutable in the UI layer.
     final updatedSave = currentState.save;
-    
-    // Assume you have currentHp and maxHp in your ActiveCharacterSave schema
-    updatedSave.currentHp = (updatedSave.currentHp - amount).clamp(0, updatedSave.maxHp);
+    updatedSave.currentHp = (updatedSave.currentHp - amount).clamp(
+      0,
+      updatedSave.maxHp,
+    );
 
-    // 1. Persist to local NoSQL
+    await _persistSave(updatedSave);
+    state = AsyncData(currentState.copyWith(save: updatedSave));
+  }
+
+  /// Updates ability scores and recalculates max HP based on standard rules
+  Future<void> updateAbilityScores(AbilityScores newScores) async {
+    final currentState = state.valueOrNull;
+    if (currentState == null) return;
+
+    final updatedSave = currentState.save;
+    updatedSave.baseScores = newScores;
+
+    if (currentState.characterClass != null) {
+      updatedSave.maxHp = calculateStandardMaxHp(
+        level: updatedSave.level,
+        conMod: newScores.conMod,
+        hitDie: currentState.characterClass!.hitDie,
+      );
+      
+      // Auto-heal if max HP increases beyond current, or if uninitialized
+      if (updatedSave.currentHp > updatedSave.maxHp || updatedSave.currentHp == 0) {
+        updatedSave.currentHp = updatedSave.maxHp;
+      }
+    }
+
+    await _persistSave(updatedSave);
+    state = AsyncData(currentState.copyWith(save: updatedSave));
+  }
+
+  /// Wraps Isar write transactions
+  Future<void> _persistSave(ActiveCharacterSave save) async {
     final isar = DatabaseInitializer.isar;
     await isar.writeTxn(() async {
-      await isar.activeCharacterSaves.put(updatedSave);
+      await isar.activeCharacterSaves.put(save);
     });
-
-    // 2. Broadcast the update immediately to the UI without forcing a full DB re-fetch
-    state = AsyncData(currentState.copyWith(save: updatedSave));
   }
 }

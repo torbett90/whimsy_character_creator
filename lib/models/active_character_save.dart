@@ -10,7 +10,7 @@ class ActiveCharacterSave {
   late String characterName;
   int level = 1;
   int currentHp = 0;
-  int maxHp = 0; 
+  int maxHp = 0;
   int temporaryHp = 0;
 
   // Pointers to the Rulebook Collections
@@ -23,4 +23,32 @@ class ActiveCharacterSave {
   List<String> inventory = [];
   List<String> selectedSpells = [];
   List<String> selectedFeatures = [];
+
+  // Core Stats
+  AbilityScores baseScores = AbilityScores();
+}
+
+@embedded
+class AbilityScores {
+  int strength = 10;
+  int dexterity = 10;
+  int constitution = 10;
+  int intelligence = 10;
+  int wisdom = 10;
+  int charisma = 10;
+
+  @ignore
+  int get strMod => _calculateModifier(strength);
+  @ignore
+  int get dexMod => _calculateModifier(dexterity);
+  @ignore
+  int get conMod => _calculateModifier(constitution);
+  @ignore
+  int get intMod => _calculateModifier(intelligence);
+  @ignore
+  int get wisMod => _calculateModifier(wisdom);
+  @ignore
+  int get chaMod => _calculateModifier(charisma);
+
+  int _calculateModifier(int score) => ((score - 10) / 2).floor();
 }

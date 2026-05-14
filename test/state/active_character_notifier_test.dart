@@ -66,7 +66,7 @@ void main() {
 
     // Remove the 'final sub =' assignment and name the callback variables
     container.listen(activeCharacterProvider(1), (previous, next) {});
-    
+
     var state = await container.read(activeCharacterProvider(1).future);
 
     final newScores = AbilityScores()..constitution = 16; // CON mod +3

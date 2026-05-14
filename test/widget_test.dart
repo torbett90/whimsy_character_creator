@@ -5,7 +5,9 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:whimsy_character_creator/main.dart';
 
 void main() {
-  testWidgets('Character Dashboard loading smoke test', (WidgetTester tester) async {
+  testWidgets('Character Dashboard loading smoke test', (
+    WidgetTester tester,
+  ) async {
     // 1. Build our app and wrap it in a ProviderScope (Required by Riverpod)
     await tester.pumpWidget(const ProviderScope(child: MyApp()));
 

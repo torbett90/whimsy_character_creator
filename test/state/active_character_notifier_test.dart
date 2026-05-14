@@ -18,21 +18,21 @@ void main() {
     // 2. Mock path_provider method channel
     TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
         .setMockMethodCallHandler(
-      const MethodChannel('plugins.flutter.io/path_provider'),
-      (MethodCall methodCall) async {
-        if (methodCall.method == 'getApplicationDocumentsDirectory') {
-          return Directory.systemTemp.path;
-        }
-        return null;
-      },
-    );
+          const MethodChannel('plugins.flutter.io/path_provider'),
+          (MethodCall methodCall) async {
+            if (methodCall.method == 'getApplicationDocumentsDirectory') {
+              return Directory.systemTemp.path;
+            }
+            return null;
+          },
+        );
 
     // 3. Initialize Isar core for headless testing
     await Isar.initializeIsarCore(download: true);
 
     // 4. Initialize database
     await DatabaseInitializer.initialize();
-    
+
     // Seed a test character
     final isar = DatabaseInitializer.isar;
     if (await isar.activeCharacterSaves.count() == 0) {
@@ -41,7 +41,7 @@ void main() {
         ..level = 1
         ..maxHp = 10
         ..currentHp = 10
-        ..className = "Warmage"; 
+        ..className = "Warmage";
 
       await isar.writeTxn(() async {
         await isar.activeCharacterSaves.put(newChar);
@@ -67,9 +67,11 @@ void main() {
     final sub = container.listen(activeCharacterProvider(1), (_, __) {});
 
     var state = await container.read(activeCharacterProvider(1).future);
-    
+
     final newScores = AbilityScores()..constitution = 16; // CON mod +3
-    await container.read(activeCharacterProvider(1).notifier).updateAbilityScores(newScores);
+    await container
+        .read(activeCharacterProvider(1).notifier)
+        .updateAbilityScores(newScores);
 
     state = await container.read(activeCharacterProvider(1).future);
     expect(state.save.baseScores.constitution, 16);

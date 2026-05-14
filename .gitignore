@@ -47,6 +47,10 @@ app.*.map.json
 # Isar Database Files
 *.isar
 *.isar.lock
+# Isar Core Native Binaries
+libisar.so
+libisar.dylib
+isar.dll
 
 # (Optional but recommended) 
 # We DO want to commit the generated *.g.dart files so your CI/CD pipeline 

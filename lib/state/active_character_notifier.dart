@@ -61,7 +61,6 @@ class ActiveCharacter extends _$ActiveCharacter {
     if (currentState == null) return;
 
     final updatedSave = currentState.save;
-
     updatedSave.currentHp = (updatedSave.currentHp - amount).clamp(
       0,
       updatedSave.maxHp,
@@ -85,10 +84,9 @@ class ActiveCharacter extends _$ActiveCharacter {
         conMod: newScores.conMod,
         hitDie: currentState.characterClass!.hitDie,
       );
-
+      
       // Auto-heal if max HP increases beyond current, or if uninitialized
-      if (updatedSave.currentHp > updatedSave.maxHp ||
-          updatedSave.currentHp == 0) {
+      if (updatedSave.currentHp > updatedSave.maxHp || updatedSave.currentHp == 0) {
         updatedSave.currentHp = updatedSave.maxHp;
       }
     }

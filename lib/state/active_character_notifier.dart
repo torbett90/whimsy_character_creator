@@ -15,7 +15,7 @@ part 'active_character_notifier.g.dart';
 @freezed
 class CharacterSheetState with _$CharacterSheetState {
   // Required for custom getters in Freezed
-  const CharacterSheetState._(); 
+  const CharacterSheetState._();
 
   const factory CharacterSheetState({
     required ActiveCharacterSave save,
@@ -39,11 +39,13 @@ class CharacterSheetState with _$CharacterSheetState {
   /// with the static rulebook proficiencies of their class.
   int getSavingThrow(String abilityName) {
     final baseMod = save.baseScores.getModifierByName(abilityName);
-    
+
     // Check if the static class data grants proficiency in this save
-    final isProficient = characterClass?.savingThrowProficiencies
+    final isProficient =
+        characterClass?.savingThrowProficiencies
             .map((e) => e.toLowerCase())
-            .contains(abilityName.toLowerCase()) ?? false;
+            .contains(abilityName.toLowerCase()) ??
+        false;
 
     return baseMod + (isProficient ? proficiencyBonus : 0);
   }

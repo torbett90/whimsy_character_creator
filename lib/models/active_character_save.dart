@@ -50,5 +50,30 @@ class AbilityScores {
   @ignore
   int get chaMod => _calculateModifier(charisma);
 
+  int getModifierByName(String abilityName) {
+    switch (abilityName.toLowerCase()) {
+      case 'strength':
+      case 'str':
+        return strMod;
+      case 'dexterity':
+      case 'dex':
+        return dexMod;
+      case 'constitution':
+      case 'con':
+        return conMod;
+      case 'intelligence':
+      case 'int':
+        return intMod;
+      case 'wisdom':
+      case 'wis':
+        return wisMod;
+      case 'charisma':
+      case 'cha':
+        return chaMod;
+      default:
+        return 0;
+    }
+  }
+
   int _calculateModifier(int score) => ((score - 10) / 2).floor();
 }

@@ -22,3 +22,9 @@ int calculateStandardMaxHp({
   }
   return maxHp > 0 ? maxHp : 1; // Minimum 1 HP
 }
+
+/// Standard D&D 2024 Proficiency Bonus scaling
+int calculateProficiencyBonus(int level) {
+  // Formula: +2 at L1, increases by +1 every 4 levels (L5, L9, L13, L17)
+  return ((level - 1) / 4).floor() + 2;
+}

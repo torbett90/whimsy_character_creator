@@ -14,12 +14,39 @@ part 'active_character_notifier.g.dart';
 
 @freezed
 class CharacterSheetState with _$CharacterSheetState {
+  // Required for custom getters in Freezed
+  const CharacterSheetState._(); 
+
   const factory CharacterSheetState({
     required ActiveCharacterSave save,
     DndClass? characterClass,
     Species? species,
     Background? background,
   }) = _CharacterSheetState;
+
+  // --- DERIVED STATS ---
+  // These are calculated instantly whenever the UI accesses them. No DB reads required.
+
+  int get proficiencyBonus => calculateProficiencyBonus(save.level);
+
+  // Base Initiative is Dexterity Modifier
+  int get initiative => save.baseScores.dexMod;
+
+  // Base Unarmored AC
+  int get baseArmorClass => 10 + save.baseScores.dexMod;
+
+  /// Calculates a specific saving throw by comparing the character's base modifier
+  /// with the static rulebook proficiencies of their class.
+  int getSavingThrow(String abilityName) {
+    final baseMod = save.baseScores.getModifierByName(abilityName);
+    
+    // Check if the static class data grants proficiency in this save
+    final isProficient = characterClass?.savingThrowProficiencies
+            .map((e) => e.toLowerCase())
+            .contains(abilityName.toLowerCase()) ?? false;
+
+    return baseMod + (isProficient ? proficiencyBonus : 0);
+  }
 }
 
 @riverpod

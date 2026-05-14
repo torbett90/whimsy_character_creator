@@ -4,7 +4,7 @@ extension HitDieParser on String {
     if (match != null && match.group(1) != null) {
       return int.parse(match.group(1)!);
     }
-    return 6; 
+    return 6;
   }
 
   int get averageHitDieValue => (maxHitDieValue / 2).floor() + 1;

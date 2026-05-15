@@ -23,6 +23,7 @@ class ActiveCharacterSave {
   List<String> inventory = [];
   List<String> selectedSpells = [];
   List<String> selectedFeatures = [];
+  List<String> proficientSkills = [];
 
   // Core Stats
   AbilityScores baseScores = AbilityScores();

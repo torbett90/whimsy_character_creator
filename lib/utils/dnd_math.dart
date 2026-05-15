@@ -28,3 +28,25 @@ int calculateProficiencyBonus(int level) {
   // Formula: +2 at L1, increases by +1 every 4 levels (L5, L9, L13, L17)
   return ((level - 1) / 4).floor() + 2;
 }
+
+/// Maps standard D&D skills to their governing ability score
+const Map<String, String> skillToAbilityMap = {
+  'athletics': 'strength',
+  'acrobatics': 'dexterity',
+  'sleight of hand': 'dexterity',
+  'stealth': 'dexterity',
+  'arcana': 'intelligence',
+  'history': 'intelligence',
+  'investigation': 'intelligence',
+  'nature': 'intelligence',
+  'religion': 'intelligence',
+  'animal handling': 'wisdom',
+  'insight': 'wisdom',
+  'medicine': 'wisdom',
+  'perception': 'wisdom',
+  'survival': 'wisdom',
+  'deception': 'charisma',
+  'intimidation': 'charisma',
+  'performance': 'charisma',
+  'persuasion': 'charisma',
+};

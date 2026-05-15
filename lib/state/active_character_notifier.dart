@@ -49,16 +49,17 @@ class CharacterSheetState with _$CharacterSheetState {
 
     return baseMod + (isProficient ? proficiencyBonus : 0);
   }
-  
+
   /// Calculates the total modifier for a given skill
   int getSkillModifier(String skillName) {
     final normalizedSkill = skillName.toLowerCase();
     final governingAbility = skillToAbilityMap[normalizedSkill];
-    
-    if (governingAbility == null) return 0; // Fallback for custom/unmapped skills
-    
+
+    if (governingAbility == null)
+      return 0; // Fallback for custom/unmapped skills
+
     final baseMod = save.baseScores.getModifierByName(governingAbility);
-    
+
     // Check if the character has explicitly selected this skill
     final isProficient = save.proficientSkills
         .map((e) => e.toLowerCase())
@@ -69,7 +70,7 @@ class CharacterSheetState with _$CharacterSheetState {
 
   // --- PASSIVE SENSES ---
   // Formula: 10 + Skill Modifier
-  
+
   int get passivePerception => 10 + getSkillModifier('perception');
   int get passiveInsight => 10 + getSkillModifier('insight');
   int get passiveInvestigation => 10 + getSkillModifier('investigation');

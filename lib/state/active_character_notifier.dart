@@ -31,10 +31,12 @@ class CharacterSheetState with _$CharacterSheetState {
 
   int getSavingThrow(String abilityName) {
     final baseMod = save.baseScores.getModifierByName(abilityName);
-    
-    final isProficient = characterClass?.savingThrowProficiencies
+
+    final isProficient =
+        characterClass?.savingThrowProficiencies
             .map((e) => e.toLowerCase())
-            .contains(abilityName.toLowerCase()) ?? false;
+            .contains(abilityName.toLowerCase()) ??
+        false;
 
     return baseMod + (isProficient ? proficiencyBonus : 0);
   }
@@ -42,14 +44,14 @@ class CharacterSheetState with _$CharacterSheetState {
   int getSkillModifier(String skillName) {
     final normalizedSkill = skillName.toLowerCase();
     final governingAbility = skillToAbilityMap[normalizedSkill];
-    
+
     // Wrapped in curly braces for linter compliance
     if (governingAbility == null) {
       return 0;
     }
-    
+
     final baseMod = save.baseScores.getModifierByName(governingAbility);
-    
+
     final isProficient = save.proficientSkills
         .map((e) => e.toLowerCase())
         .contains(normalizedSkill);
@@ -98,7 +100,7 @@ class ActiveCharacter extends _$ActiveCharacter {
 
   Future<void> takeDamage(int amount) async {
     final currentState = state.valueOrNull;
-    
+
     // Wrapped in curly braces for linter compliance
     if (currentState == null) {
       return;
@@ -116,7 +118,7 @@ class ActiveCharacter extends _$ActiveCharacter {
 
   Future<void> updateAbilityScores(AbilityScores newScores) async {
     final currentState = state.valueOrNull;
-    
+
     // Wrapped in curly braces for linter compliance
     if (currentState == null) {
       return;
@@ -131,8 +133,9 @@ class ActiveCharacter extends _$ActiveCharacter {
         conMod: newScores.conMod,
         hitDie: currentState.characterClass!.hitDie,
       );
-      
-      if (updatedSave.currentHp > updatedSave.maxHp || updatedSave.currentHp == 0) {
+
+      if (updatedSave.currentHp > updatedSave.maxHp ||
+          updatedSave.currentHp == 0) {
         updatedSave.currentHp = updatedSave.maxHp;
       }
     }

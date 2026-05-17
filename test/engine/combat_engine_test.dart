@@ -11,10 +11,13 @@ void main() {
         ..characterName = "Phase 3 Tester"
         ..level = 5
         ..baseScores = (AbilityScores()
-          ..intelligence = 18 // INT Mod: +4
-          ..strength = 14     // STR Mod: +2
-          ..dexterity = 16    // DEX Mod: +3
-        );
+          ..intelligence =
+              18 // INT Mod: +4
+          ..strength =
+              14 // STR Mod: +2
+          ..dexterity =
+              16 // DEX Mod: +3
+              );
 
       final warmageClass = DndClass()
         ..name = "Warmage"
@@ -35,7 +38,7 @@ void main() {
       expect(state.spellAttackModifier, 7);
 
       // Melee/Ranged Baselines
-      expect(state.baseMeleeAttack, 5);  // STR (2) + PB (3)
+      expect(state.baseMeleeAttack, 5); // STR (2) + PB (3)
       expect(state.baseRangedAttack, 6); // DEX (3) + PB (3)
     });
   });

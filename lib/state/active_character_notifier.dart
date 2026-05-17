@@ -44,7 +44,7 @@ class CharacterSheetState with _$CharacterSheetState {
   int getSkillModifier(String skillName) {
     final normalizedSkill = skillName.toLowerCase();
     final governingAbility = skillToAbilityMap[normalizedSkill];
-    
+
     if (governingAbility == null) {
       return 0;
     }
@@ -67,7 +67,7 @@ class CharacterSheetState with _$CharacterSheetState {
   /// Dynamically infers the spellcasting modifier from the class's primary abilities array
   int get spellcastingModifier {
     if (characterClass == null || characterClass!.primaryAbilities.isEmpty) {
-      return 0; 
+      return 0;
     }
     final primaryAbility = characterClass!.primaryAbilities.first;
     return save.baseScores.getModifierByName(primaryAbility);

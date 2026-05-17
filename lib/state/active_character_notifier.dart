@@ -14,7 +14,6 @@ part 'active_character_notifier.g.dart';
 
 @freezed
 class CharacterSheetState with _$CharacterSheetState {
-  // Required for custom getters in Freezed
   const CharacterSheetState._();
 
   const factory CharacterSheetState({
@@ -24,42 +23,33 @@ class CharacterSheetState with _$CharacterSheetState {
     Background? background,
   }) = _CharacterSheetState;
 
-  // --- DERIVED STATS ---
-  // These are calculated instantly whenever the UI accesses them. No DB reads required.
-
   int get proficiencyBonus => calculateProficiencyBonus(save.level);
 
-  // Base Initiative is Dexterity Modifier
   int get initiative => save.baseScores.dexMod;
 
-  // Base Unarmored AC
   int get baseArmorClass => 10 + save.baseScores.dexMod;
 
-  /// Calculates a specific saving throw by comparing the character's base modifier
-  /// with the static rulebook proficiencies of their class.
   int getSavingThrow(String abilityName) {
     final baseMod = save.baseScores.getModifierByName(abilityName);
-
-    // Check if the static class data grants proficiency in this save
-    final isProficient =
-        characterClass?.savingThrowProficiencies
+    
+    final isProficient = characterClass?.savingThrowProficiencies
             .map((e) => e.toLowerCase())
-            .contains(abilityName.toLowerCase()) ??
-        false;
+            .contains(abilityName.toLowerCase()) ?? false;
 
     return baseMod + (isProficient ? proficiencyBonus : 0);
   }
-  
-  /// Calculates the total modifier for a given skill
+
   int getSkillModifier(String skillName) {
     final normalizedSkill = skillName.toLowerCase();
     final governingAbility = skillToAbilityMap[normalizedSkill];
     
-    if (governingAbility == null) return 0; // Fallback for custom/unmapped skills
+    // Wrapped in curly braces for linter compliance
+    if (governingAbility == null) {
+      return 0;
+    }
     
     final baseMod = save.baseScores.getModifierByName(governingAbility);
     
-    // Check if the character has explicitly selected this skill
     final isProficient = save.proficientSkills
         .map((e) => e.toLowerCase())
         .contains(normalizedSkill);
@@ -67,9 +57,6 @@ class CharacterSheetState with _$CharacterSheetState {
     return baseMod + (isProficient ? proficiencyBonus : 0);
   }
 
-  // --- PASSIVE SENSES ---
-  // Formula: 10 + Skill Modifier
-  
   int get passivePerception => 10 + getSkillModifier('perception');
   int get passiveInsight => 10 + getSkillModifier('insight');
   int get passiveInvestigation => 10 + getSkillModifier('investigation');
@@ -111,7 +98,11 @@ class ActiveCharacter extends _$ActiveCharacter {
 
   Future<void> takeDamage(int amount) async {
     final currentState = state.valueOrNull;
-    if (currentState == null) return;
+    
+    // Wrapped in curly braces for linter compliance
+    if (currentState == null) {
+      return;
+    }
 
     final updatedSave = currentState.save;
     updatedSave.currentHp = (updatedSave.currentHp - amount).clamp(
@@ -123,10 +114,13 @@ class ActiveCharacter extends _$ActiveCharacter {
     state = AsyncData(currentState.copyWith(save: updatedSave));
   }
 
-  /// Updates ability scores and recalculates max HP based on standard rules
   Future<void> updateAbilityScores(AbilityScores newScores) async {
     final currentState = state.valueOrNull;
-    if (currentState == null) return;
+    
+    // Wrapped in curly braces for linter compliance
+    if (currentState == null) {
+      return;
+    }
 
     final updatedSave = currentState.save;
     updatedSave.baseScores = newScores;
@@ -137,10 +131,8 @@ class ActiveCharacter extends _$ActiveCharacter {
         conMod: newScores.conMod,
         hitDie: currentState.characterClass!.hitDie,
       );
-
-      // Auto-heal if max HP increases beyond current, or if uninitialized
-      if (updatedSave.currentHp > updatedSave.maxHp ||
-          updatedSave.currentHp == 0) {
+      
+      if (updatedSave.currentHp > updatedSave.maxHp || updatedSave.currentHp == 0) {
         updatedSave.currentHp = updatedSave.maxHp;
       }
     }
@@ -149,7 +141,6 @@ class ActiveCharacter extends _$ActiveCharacter {
     state = AsyncData(currentState.copyWith(save: updatedSave));
   }
 
-  /// Wraps Isar write transactions
   Future<void> _persistSave(ActiveCharacterSave save) async {
     final isar = DatabaseInitializer.isar;
     await isar.writeTxn(() async {

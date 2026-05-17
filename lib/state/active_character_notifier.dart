@@ -44,8 +44,7 @@ class CharacterSheetState with _$CharacterSheetState {
   int getSkillModifier(String skillName) {
     final normalizedSkill = skillName.toLowerCase();
     final governingAbility = skillToAbilityMap[normalizedSkill];
-
-    // Wrapped in curly braces for linter compliance
+    
     if (governingAbility == null) {
       return 0;
     }
@@ -62,6 +61,29 @@ class CharacterSheetState with _$CharacterSheetState {
   int get passivePerception => 10 + getSkillModifier('perception');
   int get passiveInsight => 10 + getSkillModifier('insight');
   int get passiveInvestigation => 10 + getSkillModifier('investigation');
+
+  // --- COMBAT & SPELLCASTING ---
+
+  /// Dynamically infers the spellcasting modifier from the class's primary abilities array
+  int get spellcastingModifier {
+    if (characterClass == null || characterClass!.primaryAbilities.isEmpty) {
+      return 0; 
+    }
+    final primaryAbility = characterClass!.primaryAbilities.first;
+    return save.baseScores.getModifierByName(primaryAbility);
+  }
+
+  /// D&D 2024 Standard: 8 + PB + Spellcasting Mod
+  int get spellSaveDC => 8 + proficiencyBonus + spellcastingModifier;
+
+  /// D&D 2024 Standard: PB + Spellcasting Mod
+  int get spellAttackModifier => proficiencyBonus + spellcastingModifier;
+
+  /// Base Unarmed / Generic Melee Attack (STR Mod + PB)
+  int get baseMeleeAttack => save.baseScores.strMod + proficiencyBonus;
+
+  /// Base Generic Ranged Attack (DEX Mod + PB)
+  int get baseRangedAttack => save.baseScores.dexMod + proficiencyBonus;
 }
 
 @riverpod
